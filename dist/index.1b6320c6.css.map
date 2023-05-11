@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAKA;;;;AAIA","sources":["assets/css/normalize.css"],"sourcesContent":["* {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nli {\r\n    list-style: none;\r\n}\r\n\r\na {\r\n    text-decoration: none;\r\n}"],"names":[],"version":3,"file":"index.1b6320c6.css.map","sourceRoot":"/__parcel_source_root/"}
