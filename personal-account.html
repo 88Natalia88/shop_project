@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/personal-account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    
+<!--ЛК - Личные данные (Настя)-->    
     <div class="transition">
         <a href="index.html">Главная</a>
         <p>></p>
@@ -23,14 +23,15 @@
     </div>
     <div class="account">
         <div class="account__transition">
-            <a href="">История заказов</a>
-            <p>Личные данные</p>
+            <a href="orders-history.html">История заказов</a>
+            <p class="here">Личные данные</p>
             <a href="">Выйти</a>
         </div>   
         <div>
-            <p>Персональные данные:</p>
+            
             <form>
-                    <div class="account__info">
+                <p>Персональные данные:</p>
+                    <div class="inputs">
                         <input class="name" placeholder="Имя">
                         <input class="surname" placeholder="Фамилия">
                         <input type="email" placeholder="Электронная почта">
@@ -38,10 +39,12 @@
                     </div>
                 <div class="address">
                     <p>Адрес доставки:</p>
-                    <input class="city" placeholder="Город">
-                    <input class="house-address" placeholder="Адрес">
+                    <div class="inputs">
+                        <input class="city" placeholder="Город">
+                        <input class="house-address" placeholder="Адрес">
+                    </div>
                 </div>
-                <button type="submit">ОБНОВИТЬ ИНФОРМАЦИЮ</button>
+                <button type="submit">Обновить информацию</button>
                 </form>
         </div> 
     </div>

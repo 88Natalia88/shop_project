@@ -1,0 +1,58 @@
+body {
+    margin: 80px;
+    font-size: 16px;
+}
+
+* {
+    padding: 5px;
+}
+
+.transition {
+    display: flex;
+    flex-direction: row;
+}
+
+.account {
+    text-align: center;
+}
+
+.account__transition {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    border: 1px solid rgba(0, 0, 0, 0.408);
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+    height: 35px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.here {
+    background: #E0BEA2;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    
+}
+
+form {
+    text-align: start;
+}
+
+input {
+    width: 23%;
+}
+
+.city, .house-address {
+    width: 48%;
+}
