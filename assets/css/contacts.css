@@ -42,12 +42,12 @@ body {
   display: flex;
 }
 .container-connect__inst {
-  background-image: url(/assets/images/logo/inst.svg);
+  background-image: url(/assets/images/icons/inst.svg);
   width: 25px;
   height: 25px;
 }
 .container-connect__telegram {
-  background-image: url(/assets/images/logo/telegram.svg);
+  background-image: url(/assets/images/icons/telegram.svg);
   width: 25px;
   height: 25px;
   margin-left: 15px;
@@ -87,7 +87,6 @@ body {
   width: 600px;
   height: 50px;
   font-size: 20px;
-  padding-left: 10px;
 }
 
 form {
@@ -122,4 +121,44 @@ form {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  body {
+    margin: 0px 20px;
+    font-size: 16px;
+  }
+  .connect__title {
+    margin-top: 23px;
+  }
+  .container-connect {
+    margin-top: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .container-connect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .mailing {
+    margin-top: 64px;
+  }
+  .mailing__input {
+    margin-top: 30px;
+  }
+  .mailing__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  form,
+  .email,
+  .mailing__btn {
+    max-width: 335px;
+    min-width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  .container-connect {
+    column-gap: 20px;
+  }
 }
