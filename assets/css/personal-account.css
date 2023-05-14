@@ -29,6 +29,12 @@ body {
     height: 20%;
 }
 
+.account__transition_item {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .inputs {
     display: flex;
     justify-content: space-between;
@@ -41,7 +47,7 @@ button {
     cursor: pointer;
 }
 
-.here {
+#here {
     background: #E0BEA2;
     color: rgb(255, 255, 255);
     margin: 0;
