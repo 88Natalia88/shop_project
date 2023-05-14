@@ -42,12 +42,12 @@ body {
   display: flex;
 }
 .container-connect__inst {
-  background-image: url(/assets/images/contacts-icons/inst.svg);
+  background-image: url(/assets/images/logo/inst.svg);
   width: 25px;
   height: 25px;
 }
 .container-connect__telegram {
-  background-image: url(/assets/images/contacts-icons/telegram.svg);
+  background-image: url(/assets/images/logo/telegram.svg);
   width: 25px;
   height: 25px;
   margin-left: 15px;
