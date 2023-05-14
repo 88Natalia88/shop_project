@@ -1,0 +1,19 @@
+@import "normalize.css";
+.footer__container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.footer__column {
+  flex: 1;
+  padding: 20px;
+}
+.footer__column p {
+  margin: 5% 0;
+}
+
+.footer__item {
+  text-align: center;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=footer.css.map */
