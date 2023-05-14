@@ -1,30 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
 }
 
-li {
-    list-style: none;
+li,
+ul,
+ol {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 button {
-    background: #E0BEA2;
-    color: white;
-    border: 0;
-    text-transform: uppercase;
-    cursor: pointer;
+  background: #e0bea2;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 button:hover {
-    background: #CCA88A;
+  background: #cca88a;
 }
 
 input {
-    border: 0.5px solid rgba(0, 0, 0, 0.408);
+  border: 0.5px solid rgba(0, 0, 0, 0.408);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
 }

@@ -1,19 +1,17 @@
 .body {
     max-width: 1440px;
     margin: auto;
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
     color: #252525;
-
 }
 
 .exchange-and-return {
     margin: 20px 150px 20px 150px;
 }
-
 
 .top-menu {
     margin: 40px 0 30px 0;
@@ -58,7 +56,6 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
-
     .body {
         font-size: 14px;
         line-height: 20px;
@@ -72,11 +69,9 @@
         font-size: 18px;
         line-height: 21px;
     }
-
 }
 
 @media screen and (max-width: 375px) {
-
     .body {
         font-size: 14px;
         line-height: 20px;
@@ -85,7 +80,6 @@
     .exchange-and-return {
         margin: 20px 20px 20px 20px;
     }
-
 
     .top-menu {
         margin: 15px 0 15px 0;
