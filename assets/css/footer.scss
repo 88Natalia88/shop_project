@@ -1,0 +1,28 @@
+@import "normalize.css";
+.footer__container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.footer__column {
+  flex: 1;
+
+  padding: 20px;
+  p {
+    margin: 5% 0;
+  }
+}
+.footer__item {
+  text-align: center;
+  font-size: 0.8rem;
+}
+// @media (max-width: 767px) {
+//   footer {
+//     justify-content: center;
+//   }
+//   .footer__container {
+//     width: 50%;
+//     display: block;
+//   }
+// }
