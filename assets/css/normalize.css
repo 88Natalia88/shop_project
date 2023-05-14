@@ -27,9 +27,14 @@ button:hover {
   background: #cca88a;
 }
 
+a:hover {
+  color: #E0BEA2;
+}
+
 input {
   border: 0.5px solid rgba(0, 0, 0, 0.408);
 }
+
 h1,
 h2,
 h3,

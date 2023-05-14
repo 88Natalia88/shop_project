@@ -1,0 +1,38 @@
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 16px;
+}
+
+* {
+    padding: 5px;
+}
+
+.transition {
+    display: flex;
+    flex-direction: row;
+}
+
+.orders-history__transition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.408);
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+    padding-right: 50px;
+    height: 20%;
+}
+
+.here {
+    background: #E0BEA2;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    
+}
+
+#orders-status {
+    text-align: center;
+    margin-top: 20%;
+}
