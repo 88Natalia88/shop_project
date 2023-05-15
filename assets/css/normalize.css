@@ -35,6 +35,13 @@ input {
   border: 0.5px solid rgba(0, 0, 0, 0.408);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #e5e5e5 inset;
+}
+
 h1,
 h2,
 h3,
