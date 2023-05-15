@@ -13,7 +13,6 @@
     <title>YANKI - История заказов</title>
     <script type="module" src="assets/js/index.js"></script>
 </head>
-
 <body>
 <!--ЛК - История заказов (Настя)-->    
     <div class="transition">
@@ -25,10 +24,11 @@
         <div class="orders-history__transition">
             <p id="here" class="orders-history__transition_item">История заказов</p>
             <a href="personal-account.html" class="orders-history__transition_item">Личные данные</a>
-            <a href="" class="orders-history__transition_item">Выйти</a>
+            <a href="authorization.html" class="orders-history__transition_item" onclick="logout()">Выйти</a>
         </div>
     </div>
     <div id="orders-status">История пуста. Сделайте свой первый заказ прямо сейчас!</div>
+    <script src="assets\js\orders-history.js"></script>
 </body>
 
 </html>

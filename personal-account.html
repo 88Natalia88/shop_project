@@ -25,29 +25,29 @@
         <div class="account__transition">
             <a href="orders-history.html" class="account__transition_item">История заказов</a>
             <p id="here" class="account__transition_item">Личные данные</p>
-            <a href="" class="account__transition_item">Выйти</a>
+            <a href="authorization.html" class="account__transition_item" onclick="logout()">Выйти</a>
         </div>   
         <div>
-            
-            <form>
+            <form id="account-form" onsubmit="updateInformation(event)">
                 <p>Персональные данные:</p>
                     <div class="inputs">
-                        <input class="name" placeholder="Имя">
-                        <input class="surname" placeholder="Фамилия">
-                        <input type="email" placeholder="Электронная почта">
-                        <input type="tel" placeholder="Номер телефона">
+                        <input class="name" placeholder="Имя" required>
+                        <input class="surname" placeholder="Фамилия" required>
+                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="tel" placeholder="Номер телефона" required>
                     </div>
                 <div class="address">
                     <p>Адрес доставки:</p>
                     <div class="inputs">
-                        <input class="city" placeholder="Город">
-                        <input class="house-address" placeholder="Адрес">
+                        <input class="city" placeholder="Город" required>
+                        <input class="house-address" placeholder="Адрес" required>
                     </div>
                 </div>
                 <button type="submit">Обновить информацию</button>
                 </form>
         </div> 
     </div>
+    <script src="assets\js\personal-account.js"></script>
 </body>
 
 </html>
