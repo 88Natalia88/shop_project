@@ -557,6 +557,7 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"1E7ZB":[function(require,module,exports) {
+fetch("https://fakestoreapi.com/products").then((res)=>res.json()).then((json)=>console.log(json));
 
 },{}]},["ikkB3","1E7ZB"], "1E7ZB", "parcelRequire5a7f")
 
