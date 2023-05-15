@@ -1,4 +1,39 @@
-* {
-    font-size: 16px;
+.form_auth_block{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
     text-align: center;
+}
+.form_auth_block_content{
+    padding-top: 15%;
+}
+.form_auth_block_head_text{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #ffffff;
+    opacity: 0.7;
+}
+.form_auth_block input{
+    margin: 10px;
+    width: 80%;
+    height: 45px;
+    padding-left: 5px;  
+}
+
+.form_auth_button{
+    width: 82%;
+    margin: 0 auto;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.non-auth {
+    text-decoration: underline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
 }
