@@ -14,19 +14,28 @@
     <script type="module" src="assets/js/index.js"></script>
 </head>
 <body>
-    <div class="form_auth_block">
-        <div class="form_auth_block_content">
-            <p class="form_auth_block_head_text">Авторизация</p>
-            <form class="form_auth_style" action="#" method="post">
-                <input type="email" name="auth_email" placeholder="Ваш e-mail*" required >
-                <input type="password" name="auth_pass" placeholder="Ваш пароль*" required >
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>                
+            <form id="login-form">
+                <h2>Авторизация</h2>
+                <div>
+                    <input type="email" name="username" placeholder="Ваш e-mail" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Ваш пароль" required>
+                </div>
                 <div class="non-auth">
                     <a href="">Забыли пароль?</a>
                     <a href="">Нет аккаунта?</a>
                 </div>
-                <button class="form_auth_button" type="submit" name="form_auth_submit">Войти</button>
+                <div>
+                    <button type="submit">Войти</button>
+                </div>
             </form>
         </div>
-      </div>
+    </div>
+      
+      
 </body>
 </html>
