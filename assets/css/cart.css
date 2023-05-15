@@ -39,6 +39,7 @@
     margin: 20px 0 30px 20px;
 }
 
-.cart__path img {
+.cart__path span {
     margin: 0 11px 0 11px;
+    color: #E0BEA2;
 }
