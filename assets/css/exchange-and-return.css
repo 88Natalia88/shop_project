@@ -10,6 +10,11 @@
 
 }
 
+.little-arrow-menu {
+    color: #E0BEA2;
+    display: inline;
+}
+
 .exchange-and-return {
     margin: 20px 150px 20px 150px;
 }
