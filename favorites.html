@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YANKI - Избранное</title>
+        <link rel="stylesheet" href="/assets/css/normalize.css" />
+        <link rel="stylesheet" href="/assets/css/favorites.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_container">
+                <div class="header__logoBurger">
+                    <img
+                        class="header__logoBurger_img"
+                        src="assets/images/logo/header.svg"
+                        alt="menu"
+                    />
+                </div>
+                <nav class="header__menuBurger">
+                    <h4 class="burger__head">Каталог</h4>
+                    <a href="#"><p>New</p></a>
+                    <a href="#"><p>Bestsellers</p></a>
+                    <a href="#"><p>Верхняя одежда</p></a>
+                    <a href="#"><p>Шубы</p></a>
+                    <a href="#"><p>Тренчи</p></a>
+                    <a href="#"><p>Пальто</p></a>
+                    <a href="#"><p>Пуховики и жилеты</p></a>
+                    <a href="#"><p>Костюмы</p></a>
+                    <a href="#"><p>Жакеты</p></a>
+                    <a href="#"><p>Платья</p></a>
+                    <a href="#"><p>Рубашки и блузы</p></a>
+                    <a href="#"><p>Юбки</p></a>
+                    <a href="#"><p>Футболки и топы</p></a>
+                    <a href="#"><p>Аксессуары</p></a>
+                    <a href="#"><p>Sale</p></a>
+                    <a href="#"><p>Summer</p></a>
+                    <a href="#"><p>Посмотреть всё</p></a>
+                </nav>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">NEW</a>
+                        </li>
+                        <li class="menu__item">
+                            <span class="menu__list_spanCatalog"
+                                ><a href="#" class="menu__link"
+                                    >КАТАЛОГ</a
+                                ></span
+                            >
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">О НАС</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__logo">
+                    <img
+                        class="header__logo_img"
+                        src="assets/images/logo/YANKI.svg"
+                        alt="Yanki"
+                    />
+                </a>
+                <div class="header__drop">
+                    <select
+                        name="header__selectLanguage"
+                        class="header__selectLanguage"
+                    >
+                        <option value="1" selected>EN</option>
+                        <option value="2">RU</option>
+                        <option value="3">UK</option>
+                    </select>
+                    <select
+                        name="header__selectCurrency"
+                        class="header__selectCurrency"
+                    >
+                        <option value="1" selected>USD</option>
+                        <option value="2">RUB</option>
+                        <option value="3">UAH</option>
+                        <option value="4">EUR</option>
+                    </select>
+                </div>
+                <div class="header__menuIcons">
+                    <a href="#" class="header__logoSearch header__logo_link">
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/search.svg"
+                            alt="search link"
+                        />
+                    </a>
+                    <a href="#" class="header__logoContacts header__logo_link">
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/contacts.svg"
+                            alt="contacts link"
+                        />
+                    </a>
+                    <a href="#" class="header__logoFav header__logo_link">
+                        <img
+                            src="assets/images/logo/favorite.svg"
+                            class="header__logo_icon"
+                            alt="favorite_category link"
+                        />
+                    </a>
+                    <a href="#" class="header__logoCart header__logo_link">
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/cart.svg"
+                            alt="cart link"
+                        />
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="transition">
+            <a href="index.html">Главная</a>
+            <span class="transition__arrow">></span>
+            <p>Избранное</p>
+        </div>
+        <section class="favorites-container"></section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <h4>КОМПАНИЯ</h4>
+                    <a href="#"><p>О нас</p></a>
+                    <a href="#"><p>Контакты</p></a>
+                </div>
+                <div class="footer__column">
+                    <h4>ПОЛЕЗНОЕ</h4>
+                    <a href="#"><p>Оплата и доставка</p></a>
+                    <a href="#"><p>Условия возврата</p></a>
+                    <a href="#"><p>Бонусная система</p></a>
+                </div>
+                <div class="footer__column">
+                    <h4>ПОКУПАТЕЛЮ</h4>
+                    <a href="#"><p>Избранное</p></a>
+                    <a href="#"><p>Публичная оферта</p></a>
+                    <a href="#"><p>Политика конфиденциальности</p></a>
+                </div>
+                <div class="footer__column">
+                    <h4>КОНТАКТЫ</h4>
+                    <p>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/inst.svg"
+                                alt="SVG Icon"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/telegram.svg"
+                                alt="SVG Icon"
+                        /></a>
+                    </p>
+                    <p>+38(073) 096 36 44</p>
+                    <a href="#">info@yanki.com</a>
+                </div>
+            </div>
+            <p class="footer__item">©️ 2021 Yanki. All rights reserved</p>
+        </footer>
+        <script type="module" src="assets/js/header.js"></script>
+        <script type="module" src="assets/js/footer.js"></script>
+    </body>
+</html>
