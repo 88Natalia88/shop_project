@@ -1,3 +1,5 @@
+@import "header.css";
+@import "footer.css";
 body {
   margin: 25px 150px;
   font-size: 16px;
@@ -57,7 +59,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 119px;
+  margin-top: 112px;
+  margin-bottom: 104px;
 }
 .mailing__title {
   font-weight: 300;
