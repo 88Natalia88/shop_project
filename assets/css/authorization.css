@@ -1,7 +1,8 @@
 .modal {
+    /*display: none;*/
     font-size: 16px;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -21,9 +22,18 @@
     height: 350px;
 }
 
+.enter-email {
+    padding: 10px;
+    text-align: start;
+    width: 80%;
+    padding-left: 40px;
+    font-size: 15px;
+    
+}
+
 input {
     width: 80%;
-    height: 35px;
+    height: 40px;
     margin: 10px;
     padding-left: 25px;
 }
@@ -67,6 +77,6 @@ button {
 .password__btn {
     position: absolute;
     right: 65px;
-    top: 19px;
+    top: 22px;
     cursor: pointer;
 }
