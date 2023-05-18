@@ -8,7 +8,7 @@ body {
   margin-top: 31px;
 }
 .transition__arrow {
-  color: #E0BEA2;
+  color: #e0bea2;
   margin: 0 13px;
 }
 
@@ -159,6 +159,7 @@ form {
 }
 @media (max-width: 390px) {
   .container-connect {
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
-}
+}/*# sourceMappingURL=contacts.css.map */
