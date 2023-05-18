@@ -32,6 +32,71 @@
                 <a href="index.html">Перейти за покупками</a>
             </div>
         </div>
+        <div class="decor">
+            <div class="decor__title">
+                <h4>Оформление заказа</h4>
+            </div>
+            <form class="decor-form">
+                <div class="decor-form__form">
+                <div class="decor-form__form-title title"><p>Персональные данные:</p></div>
+                <div class="decor-form__form-order">
+                    <input type="text" placeholder="Ваше имя*" required id="userName">
+                    <input type="text" placeholder="Ваша фамилия*" required id="userSername">
+                    <input type="email" placeholder="Ваш e-mail*" required id="userEmail">
+                    <input type="tel" placeholder="Ваш телефон*" required id="userTel">
+                </div></div>
+                <div class="decor-form__decor">
+<div class="decor-form__decor-title title"><p>Способ доставки:</p></div>
+<div classs="decor-form__decor-country">
+    <div class="decor-country__inside">
+        <p>По Украине:</p>
+        <div class="inside__pickup"><input type="radio" name="side" value="Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)" id="pickup">
+            <label for="pickup">Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)</label></div>
+        <div class="inside__post"><input type="radio" name="side" value="Новая Почта" id="post">
+            <label for="post">Новая Почта</label></div>
+        
+    </div>
+    <div class="decor-country__outside">
+        <p>Международная доставка:</p>
+        <div class="outside__postOffice"><input type="radio" name="side" value="Украпочта / 1-3 недели / 30$" id="postOffice">
+            <label for="postOffice">Украпочта / 1-3 недели / 30$</label></div>
+        <div class="outside__DHL"><input type="radio" name="side" value="DHL / 3-7 дней / 60$" id="DHL">
+            <label for="DHL">DHL / 3-7 дней / 60$</label></div>
+        
+    </div>
+</div>
+<div class="decor-form__address">
+    <div class="decor-form__address-title title"><p>Адрес доставки:</p></div>
+    <div class="decor-form__address-city">
+        <input type="text" placeholder="Город*" required id="city">
+        <input type="text" placeholder="Отделение почты*" required id="idPost">
+    </div>
+</div>
+<div class="decor-form__pay">
+    <div class="decor-form__pay-title title">
+        <p>Вы можете оплатить покупку одним из ниже перечисленных способов:</p>
+    </div>
+    <div class="decor-form__pay-choice">
+        <input type="radio" name="choice" value="Полная предоплата через Приват 24" id="prepayment">
+        <label for="prepayment">Полная предоплата через Приват 24<img src="assets/images/logo/logo_24.png"></label>
+        <input type="radio" name="choice" value="Наложенным платежом в отделении Новой Почты" id="payment">
+        <label for="payment">Наложенным платежом в отделении Новой Почты</label>
+        <input type="radio" name="choice" value="Денежным переводом  Visa/MasterCard" id="remittance">
+        <label for="remittance">Денежным переводом  Visa/MasterCard<img src="assets/images/logo/Visa_logo.png"><img src="assets/images/logo/Mastercard_logo.png"></label>
+    </div>
+</div>
+<div class="decor-form__bonus">
+    <div class="decor-form__bonus-title title">
+        <p>Использование бонусного счёта:</p>
+    </div>
+    <div class="decor-form__bonus-sum">
+        <input type="text" id="bonus" placeholder="Сумма списания бонусов">
+    </div>
+</div>
+                </div>
+            </form>
+
+        </div>
     </section>
 
 </body>
