@@ -1,7 +1,7 @@
 @import "normalize.css";
 @import "footer.css";
-@import "header.css";
 @import "contacts.css";
+@import "header.css";
 body {
   margin: 0;
   display: flex;
