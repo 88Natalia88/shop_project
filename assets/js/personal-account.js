@@ -1,44 +1,33 @@
-const accountForm = document.getElementById("account-form");
-const nameInput = document.querySelector(".name");
-const surnameInput = document.querySelector(".surname");
-const emailInput = document.querySelector("input[type='email']");
-const phoneInput = document.querySelector("input[type='tel']");
-const cityInput = document.querySelector(".city");
-const addressInput = document.querySelector(".house-address");
+// Обработчик событий для формы с личными данными
+const accountForm = document.querySelector('#account-form');
+if (accountForm) {
+    accountForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Отмена отправки формы по умолчанию
 
-function updateInformation(event) {
-    event.preventDefault(); // предотвращаем отправку формы по умолчанию
-    const formData = new FormData(accountForm); // получаем данные формы
-    const body = Object.fromEntries(formData); // преобразуем данные в объект
+    const formData = new FormData(accountForm);
+    const name = formData.get('name');
+    const surname = formData.get('surname');
+    const email = formData.get('email');
+    const phone = formData.get('tel');
+    const city = formData.get('city');
+    const address = formData.get('house-address');
 
-    fetch("/api/update-information", {
-        method: "PUT",
-        body: JSON.stringify(body),
-        headers: {
-            "Content-Type": "application/json"
-        }
-        })
-        .then(response => {
-            if (!response.ok) {
-            throw new Error("Ошибка при обновлении информации");
-            }
-            return response.json();
-        })
-        .then(json => {
-          // обновляем данные в DOM
-            nameInput.value = json.name;
-            surnameInput.value = json.surname;
-            emailInput.value = json.email;
-            phoneInput.value = json.phone;
-            cityInput.value = json.city;
-            addressInput.value = json.address;
-            alert("Информация успешно обновлена");
-        })
-        .catch(error => {
-            alert(error.message);
-        });
-    }
-
-    accountForm.addEventListener("submit", updateInformation);
+    // Отправка данных на сервер
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/update-information');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function() {
+        alert('Данные успешно обновлены!');
+    };
+    xhr.send(JSON.stringify({
+        name: name,
+        surname: surname,
+        email: email,
+        phone: phone,
+        city: city,
+        address: address
+    }));
+    });
+}
     
     
