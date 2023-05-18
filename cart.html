@@ -32,10 +32,12 @@
                 <a href="index.html">Перейти за покупками</a>
             </div>
         </div>
-        <div class="decor">
+
+        <div class="decor hidden">
             <div class="decor__title">
                 <h4>Оформление заказа</h4>
             </div>
+            <div class="decor-ordering">
             <form class="decor-form">
                 <div class="decor-form__form">
                 <div class="decor-form__form-title title"><p>Персональные данные:</p></div>
@@ -47,16 +49,17 @@
                 </div></div>
                 <div class="decor-form__decor">
 <div class="decor-form__decor-title title"><p>Способ доставки:</p></div>
-<div classs="decor-form__decor-country">
-    <div class="decor-country__inside">
+<div class="decor-form__decor-country">
+    <div class="decor-country__inside country">
         <p>По Украине:</p>
-        <div class="inside__pickup"><input type="radio" name="side" value="Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)" id="pickup">
+        <div class="inside__pickup">
+            <input type="radio" name="side" value="Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)" id="pickup">
             <label for="pickup">Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)</label></div>
         <div class="inside__post"><input type="radio" name="side" value="Новая Почта" id="post">
             <label for="post">Новая Почта</label></div>
         
     </div>
-    <div class="decor-country__outside">
+    <div class="decor-country__outside country">
         <p>Международная доставка:</p>
         <div class="outside__postOffice"><input type="radio" name="side" value="Украпочта / 1-3 недели / 30$" id="postOffice">
             <label for="postOffice">Украпочта / 1-3 недели / 30$</label></div>
@@ -77,12 +80,15 @@
         <p>Вы можете оплатить покупку одним из ниже перечисленных способов:</p>
     </div>
     <div class="decor-form__pay-choice">
-        <input type="radio" name="choice" value="Полная предоплата через Приват 24" id="prepayment">
-        <label for="prepayment">Полная предоплата через Приват 24<img src="assets/images/logo/logo_24.png"></label>
-        <input type="radio" name="choice" value="Наложенным платежом в отделении Новой Почты" id="payment">
-        <label for="payment">Наложенным платежом в отделении Новой Почты</label>
-        <input type="radio" name="choice" value="Денежным переводом  Visa/MasterCard" id="remittance">
-        <label for="remittance">Денежным переводом  Visa/MasterCard<img src="assets/images/logo/Visa_logo.png"><img src="assets/images/logo/Mastercard_logo.png"></label>
+        <div class="pay-choice">
+            <input type="radio" name="choice" value="Полная предоплата через Приват 24" id="prepayment">
+            <label for="prepayment">Полная предоплата через Приват 24<img src="assets/images/logo/logo_24.png"></label></div>
+        <div class="pay-choice">
+            <input type="radio" name="choice" value="Денежным переводом  Visa/MasterCard" id="remittance">
+            <label for="remittance">Денежным переводом  Visa/MasterCard<img src="assets/images/logo/Visa_logo.png"><img src="assets/images/logo/Mastercard_logo.png"></label></div>
+            <div class="pay-choice">
+                <input type="radio" name="choice" value="Наложенным платежом в отделении Новой Почты" id="payment">
+                <label for="payment">Наложенным платежом в отделении Новой Почты</label></div>
     </div>
 </div>
 <div class="decor-form__bonus">
@@ -95,7 +101,31 @@
 </div>
                 </div>
             </form>
-
+<div class="decor-info">
+    <div class="decor-info__user-room">
+        <a hfef="#">Войти в личный кабинет</a>
+    </div>
+    <div class="decor-info__delivery info">
+        <a href="#">УСЛОВИЯ ДОСТАВКИ</a>
+    </div>
+    <div class="decor-info__conditions info">
+        <a href="#">УСЛОВИЯ ОБМЕНА И ВОЗВРАТА</a>
+    </div>
+    <div class="decor-info__info info">
+        <a href="#">ИНФОРМАЦИЯ ОБ ОПЛАТЕ</a>
+    </div>
+    <div class="decor-info__sum">
+        <p id="decor">ДОСТАВКА:<span></span></p>
+        <p id="bonus">БОНУСЫ:<span></span></p>
+        <p id="sum">ИТОГО:<span></span></p>
+    </div>
+    <div class="decor-info__btn">
+        <button>ОФОРМИТЬ ЗАКАЗ</button>
+    </div>
+    <div class="decor-info__policy">
+        <p>Нажимая на кнопку «оплатить заказ», я <br> принимаю условия <a href="#">публичной оферты</a> и <br> <a href="#">политики конфиденциальности</a></p></div>
+    
+</div></div>
         </div>
     </section>
 
