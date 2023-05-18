@@ -10,7 +10,7 @@ body {
   margin-top: 31px;
 }
 .transition__arrow {
-  color: #e0bea2;
+  color: #E0BEA2;
   margin: 0 13px;
 }
 
@@ -126,6 +126,10 @@ form {
   text-align: center;
 }
 
+.header__menuBurger.show {
+  background-color: white;
+}
+
 @media (max-width: 1023px) {
   body {
     margin: 0px 20px;
@@ -162,7 +166,6 @@ form {
 }
 @media (max-width: 390px) {
   .container-connect {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
-}/*# sourceMappingURL=contacts.css.map */
+}
