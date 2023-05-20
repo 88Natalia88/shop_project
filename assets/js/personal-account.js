@@ -1,43 +1,44 @@
-function logout() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://example.com/logout", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                console.log("Выход из аккаунта выполнен");
-                window.location.href = "http://example.com/login";
-            } else {
-                console.log("Ошибка выхода из аккаунта");
-            }
-        }
-    };
-    xhr.send(JSON.stringify({
-        token: "your_token"
-    }));
-}
+const accountForm = document.getElementById("account-form");
+const nameInput = document.querySelector(".name");
+const surnameInput = document.querySelector(".surname");
+const emailInput = document.querySelector("input[type='email']");
+const phoneInput = document.querySelector("input[type='tel']");
+const cityInput = document.querySelector(".city");
+const addressInput = document.querySelector(".house-address");
 
 function updateInformation(event) {
-    event.preventDefault();
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://example.com/update_information", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                console.log("Персональные данные обновлены");
-            } else {
-                console.log("Ошибка обновления персональных данных");
-            }
+    event.preventDefault(); // предотвращаем отправку формы по умолчанию
+    const formData = new FormData(accountForm); // получаем данные формы
+    const body = Object.fromEntries(formData); // преобразуем данные в объект
+
+    fetch("/api/update-information", {
+        method: "PUT",
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json"
         }
-    };
-    xhr.send(JSON.stringify({
-        name: document.getElementsByName("name")[0].value,
-        surname: document.getElementsByName("surname")[0].value,
-        email: document.getElementsByName("email")[0].value,
-        phone: document.getElementsByName("phone")[0].value,
-        city: document.getElementsByName("city")[0].value,
-        address: document.getElementsByName("address")[0].value,
-        token: "your_token"
-    }));
-}
+        })
+        .then(response => {
+            if (!response.ok) {
+            throw new Error("Ошибка при обновлении информации");
+            }
+            return response.json();
+        })
+        .then(json => {
+          // обновляем данные в DOM
+            nameInput.value = json.name;
+            surnameInput.value = json.surname;
+            emailInput.value = json.email;
+            phoneInput.value = json.phone;
+            cityInput.value = json.city;
+            addressInput.value = json.address;
+            alert("Информация успешно обновлена");
+        })
+        .catch(error => {
+            alert(error.message);
+        });
+    }
+
+    accountForm.addEventListener("submit", updateInformation);
+    
+    
