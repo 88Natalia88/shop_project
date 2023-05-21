@@ -40,3 +40,38 @@ window.onclick = function(event) {
     }
 };
 
+//Модальные окна "Забыли пароль?" и "Нет аккаунта?"
+const forgotPasswordLink = document.querySelector("#forgot-password-link");
+const forgotPasswordModal = document.querySelector("#forgot-password-modal");
+const closeForgotPasswordModal = forgotPasswordModal.querySelector(".close");
+
+const registerLink = document.querySelector("#register-link");
+const registerModal = document.querySelector("#register-modal");
+const closeRegisterModal = registerModal.querySelector(".close");
+
+forgotPasswordLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    forgotPasswordModal.style.display = "block";
+  });
+
+  closeForgotPasswordModal.addEventListener("click", function () {
+    forgotPasswordModal.style.display = "none";
+  });
+
+  registerLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    registerModal.style.display = "block";
+  });
+
+  closeRegisterModal.addEventListener("click", function () {
+    registerModal.style.display = "none";
+  });
+
+  window.addEventListener("click", function (event) {
+    if (event.target == forgotPasswordModal) {
+      forgotPasswordModal.style.display = "none";
+    } else if (event.target == registerModal) {
+      registerModal.style.display = "none";
+    }
+  });
+
