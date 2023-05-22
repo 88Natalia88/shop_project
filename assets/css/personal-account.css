@@ -1,5 +1,6 @@
 body {
-    margin: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 16px;
 }
 
@@ -19,40 +20,50 @@ body {
 .account__transition {
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.408);
     border-left: 0;
     border-right: 0;
     padding: 0;
-    height: 35px;
+    padding-right: 50px;
+    height: 20%;
+}
+
+.account__transition_item {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .inputs {
     display: flex;
     justify-content: space-between;
+    padding: 0;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
 }
 
-.here {
+#here {
     background: #E0BEA2;
     color: rgb(255, 255, 255);
     margin: 0;
     
 }
 
-form {
+#account-form {
     text-align: start;
 }
 
 input {
-    width: 23%;
+    width: 25%;
+    margin: 5px;
+    height: 25px;
 }
 
 .city, .house-address {
-    width: 48%;
+    width: 50%;
 }

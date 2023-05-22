@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/authorization.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <title>YANKI - Авторизация</title>
+    <script type="module" src="assets/js/index.js"></script>
+</head>
+<body>
+<!-- Модальное окно для Авторизации -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>                
+            <form id="login-form">
+                <h2>Авторизация</h2>
+                <div>
+                    <input type="email" name="username" placeholder="Ваш e-mail" required>
+                </div>
+                <div class="password">
+                    <input type="password" class="password__input" name="password" placeholder="Ваш пароль" required>
+                    <div class="password__btn"><img src="assets\images\icons\eye-icon.svg" alt="view"></div>
+                </div>
+                <div class="non-auth">
+                    <a href="" id="forgot-password-link">Забыли пароль?</a>
+                    <a href="" id="register-link">Нет аккаунта?</a>
+                </div>
+                <div>
+                    <button type="submit">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- Модальное окно для "Забыли пароль?" -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="forgot-password-form">
+            <h2>Забыли пароль?</h2>
+            <p class="enter-email">Введите свою почту и мы отправим вам код для сброса пароля и восстановления аккаунта:</p>
+            <div>
+                <input type="email" name="email" placeholder="Ваш e-mail" required>
+            </div>
+            <div>
+                <button type="submit">Войти</button>
+            </div>
+            </form>
+        </div>
+        </div>
+
+<!-- Модальное окно для "Нет аккаунта?" -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <div class="password">
+                <input type="password" class="password__input" name="password" placeholder="Ваш пароль" required>
+                    <div class="password__btn"><img src="assets\images\icons\eye-icon.svg" alt="view">
+                    </div>
+                    <button type="submit">Войти</button>
+        </div>
+    </div>
+    
+    <script src="assets\js\authorization.js"></script>      
+</body>
+</html>

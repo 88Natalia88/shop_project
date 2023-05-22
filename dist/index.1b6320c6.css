@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Raleway, sans-serif;
 }
 
 li {
@@ -8,7 +9,24 @@ li {
 }
 
 a {
+  color: #000;
   text-decoration: none;
+}
+
+button {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #e0bea2;
+  border: 0;
+}
+
+button:hover {
+  background: #cca88a;
+}
+
+input {
+  border: .5px solid #00000068;
 }
 
 /*# sourceMappingURL=index.1b6320c6.css.map */
