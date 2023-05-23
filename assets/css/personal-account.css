@@ -1,11 +1,12 @@
-body {
+.account-page {
+    margin: 5%;
     margin-left: 10%;
     margin-right: 10%;
     font-size: 16px;
-}
+} 
 
-* {
-    padding: 5px;
+.account-page * {
+    margin: 5px;
 }
 
 .transition {
@@ -26,7 +27,8 @@ body {
     border-right: 0;
     padding: 0;
     padding-right: 50px;
-    height: 20%;
+    height: 40px;
+    margin: 0;
 }
 
 .account__transition_item {
@@ -45,6 +47,7 @@ button {
     width: 100%;
     padding: 12px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #here {
@@ -62,8 +65,61 @@ input {
     width: 25%;
     margin: 5px;
     height: 25px;
+    font-size: 13px;
+    padding: 5px;
 }
 
 .city, .house-address {
     width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.city {
+    margin-right: 5px;
+}
+
+.house-address {
+    margin-left: 5px;
+}
+
+
+@media (max-width: 767px) {
+    .account-page {
+    margin: 0;
+    }
+
+    .account__transition {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    height: 60px;
+    }
+
+    .account__transition_item {
+    max-width: 90px;
+    font-size: 11px;
+    margin: 0;
+    }
+    button {
+    max-width: 320px;
+    font-size: 10px;
+    }
+    .inputs {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+    input {
+    width: 300px;
+    margin: 10%;
+    font-size: 12px;
+    height: 20px;
+    }
+    .city, .house-address {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+    }
 }
