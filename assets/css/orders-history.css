@@ -1,11 +1,12 @@
-body {
+.orders-history-page {
+    margin: 5%;
     margin-left: 10%;
     margin-right: 10%;
     font-size: 16px;
 }
 
-* {
-    padding: 5px;
+.orders-history-page * {
+    margin: 5px;
 }
 
 .transition {
@@ -22,7 +23,8 @@ body {
     border-right: 0;
     padding: 0;
     padding-right: 50px;
-    height: 20%;
+    height: 40px;
+    margin: 0;
 }
 
 .orders-history__transition_item {
@@ -40,5 +42,6 @@ body {
 
 #orders-status {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
