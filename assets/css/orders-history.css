@@ -45,3 +45,23 @@
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
+@media (max-width: 767px) {
+    .orders-history-page {
+    margin: 0;
+    }
+
+    .orders-history__transition {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    height: 60px;
+    }
+
+    .orders-history__transition_item {
+    max-width: 90px;
+    font-size: 11px;
+    margin: 0;
+    }
+}
