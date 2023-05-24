@@ -162,16 +162,22 @@ function renderShoppingCart() {
         console.log(product)
         let cartInfo = '';
         cartInfo = `<div class='cart-item' data-id="${product.id}">
-    <img src="${product.img}">
-    <h4 class="cart-item-title">${product.title}</h4>
-    <p class="cart-item-price">${product.price}</p>
+        <div class="cart-item-info">    
+        <img src="${product.img}">
+        <div class="cart-item__info"><p class="cartId">арт: ${product.id}</p>
+        <h4 class="cart-item-title">${product.title}</h4>
+        </div>
+        </div>
     <div class="cart-item-quantity">
-    <div><button class="items__minus minus" data-id="${product.id}">-</button></div>
+    <div class="cart-item__quantity">
+    <div><button class="items__minus minus" data-id="${product.id}">&minus;</button></div>
     <div class="items__current" data-counter="">${product.quantity}</div>
-    <div><button class="items__plus plus" data-id="${product.id}">+</button></div>		
+    <div><button class="items__plus plus" data-id="${product.id}">&plus;</button></div>	
     </div>
+    </div>
+    <p class="cart-item-price">${product.price}</p>
     <div class="button">
-    <button class="remove-cart-item" data-id="${product.id}">Удалить</button></div></div>`
+    <img class="remove-cart-item" data-id="${product.id}" src="assets/images/logo/delete.png"></div></div>`
         cartElement.innerHTML += cartInfo;
     });
     //document.querySelector('.cart__empty').style.cssText = "display: none";
