@@ -1,6 +1,8 @@
+@import "header.css";
+@import "footer.css";
 .body {
-    max-width: 1440px;
-    margin: 25px 150px;
+    max-width: 1140px;
+    margin: 50px auto 25px auto;
     font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
@@ -9,29 +11,38 @@
     color: #252525;
 }
 
+.form {
+    margin: 0 25px 0 25px;
+}
+
 .little-arrow-menu {
     color: #e0bea2;
     display: inline;
 }
 
 .exchange-and-return {
-    margin: 20px 0px 270px 0px;
+    margin: 20px auto 270px auto;
 }
+
 .top-menu {
     margin: 40px 0 30px 0;
 }
+
 .exchange-and-return__items_h1 {
     font-weight: 300;
     font-size: 20px;
     line-height: 23px;
     color: #252525;
 }
+
 .exchange-and-return__items {
     margin: 20px 0 20px 0;
 }
+
 .exchange-and-return__item_p {
     margin-bottom: 10px;
 }
+
 .list-of-exchange-and-return-conditions {
     display: grid;
     grid-template-columns: repeat(auto-fill, 165px);
@@ -40,63 +51,89 @@
     align-items: first baseline;
     gap: 30px;
 }
+
 .list-of-exchange-and-return-conditions__items {
     text-align: center;
 }
+
 .list-of-exchange-and-return-conditions__icon {
     margin-bottom: 10px;
 }
 
-@media (max-width: 1023px) {
+.header__menuBurger.show {
+    background-color: white;
+}
+
+@media screen and (min-width: 1440px) {
     .body {
-        margin: 25px 20px;
+        margin: 25px auto;
+    }
+
+    .form {
+        max-width: 1440;
+        margin: 0 auto;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .body {
+        margin: 25px 25px 25px 25px;
+    }
+
     .exchange-and-return {
         margin: 20px 0px 20px 0px;
     }
 }
+
 @media screen and (min-width: 375px) and (max-width: 768px) {
     .body {
         font-size: 14px;
         line-height: 20px;
     }
+
     .exchange-and-return {
         margin: 20px 0px 20px 0px;
     }
+
     .exchange-and-return__items_h1 {
         font-size: 18px;
         line-height: 21px;
     }
 }
+
 @media screen and (max-width: 375px) {
     .body {
         font-size: 14px;
         line-height: 20px;
     }
+
     .exchange-and-return {
         margin: 20px 0px 20px 0px;
     }
+
     .top-menu {
         margin: 15px 0 15px 0;
     }
+
     .exchange-and-return__items_h1 {
         font-size: 18px;
         line-height: 21px;
     }
+
     .exchange-and-return__items {
         margin: 15px 0 15px 0;
     }
+
     .exchange-and-return__item_p {
         margin-bottom: 5px;
     }
+
     .list-of-exchange-and-return-conditions {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         gap: 15px;
     }
+
     .list-of-exchange-and-return-conditions__icon {
         margin-bottom: 10px;
     }
