@@ -1,3 +1,6 @@
+@import "header.css";
+@import "footer.css";
+
 .orders-history-page {
     margin: 5%;
     margin-left: 10%;
@@ -34,10 +37,9 @@
 }
 
 #here {
-    background: #E0BEA2;
+    background: #e0bea2;
     color: rgb(255, 255, 255);
     margin: 0;
-    
 }
 
 #orders-status {
@@ -46,22 +48,26 @@
     margin-bottom: 10%;
 }
 
+.header__menuBurger.show {
+    background-color: white;
+}
+
 @media (max-width: 767px) {
     .orders-history-page {
-    margin: 0;
+        margin: 0;
     }
 
     .orders-history__transition {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    height: 60px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        height: 60px;
     }
 
     .orders-history__transition_item {
-    max-width: 90px;
-    font-size: 11px;
-    margin: 0;
+        max-width: 90px;
+        font-size: 11px;
+        margin: 0;
     }
 }

@@ -1,3 +1,6 @@
+@import "header.css";
+@import "footer.css";
+
 .body {
     max-width: 1140px;
     margin: 25px auto 25px auto;
@@ -75,11 +78,14 @@
     align-self: center;
 }
 
+.header__menuBurger.show {
+    background-color: white;
+}
+
 @media screen and (min-width: 1440px) {
     .body {
         margin: 25px auto;
     }
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
@@ -106,7 +112,6 @@
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
     .body {
-
         margin: 25px 25px 25px 25px;
         font-size: 14px;
         line-height: 20px;
@@ -143,7 +148,6 @@
 
 @media screen and (max-width: 375px) {
     .body {
-
         margin: 25px 25px 25px 25px;
         font-size: 14px;
         line-height: 20px;
