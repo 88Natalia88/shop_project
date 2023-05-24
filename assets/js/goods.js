@@ -18,9 +18,9 @@ function renderProducts(productsArray) {
     //console.log(card)
     let cardInfo = '';
     cardInfo = `<div class="cardInfo"><img class="img" src="${card.image}">
-            <p class="cardId">артикул: ${card.id}</p>
+            <p class="cardId">арт: ${card.id}</p>
             <p>Наименование товара: <span class="cardTitle">${card.title}</span></p>
-    <p>Цена: <span class="cardPrice">${card.price}</span> рублей</p>
+    <p>Цена: <span class="cardPrice">${card.price}</span>$</p>
     <p class="cardCategory">Категория: ${card.category}</p>
     <p class="cardDescription">Описание: ${card.description} </p>
     <button class="btn" data-id="${card.id}">Заказать</button></div>`;
