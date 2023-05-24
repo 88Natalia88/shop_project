@@ -2,7 +2,7 @@ let cardsContent = document.getElementById("cards-container");
 
 function GetHTML(Object) {
     let html = "";
-    html += `<div class="card">
+    html += `<div class="card" data-id="${Object.id}">
     <div class="card__image-wrap">
         <a href="goods.html"><img src="${Object.image}" alt="" class="card__image"></img></a>
         <button type="button" class="card__favourite" data-id="${Object.id}" data-name="${Object.title}" data-price="${Object.price}">
