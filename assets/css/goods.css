@@ -33,23 +33,46 @@
 .product-card {
     border: 2px grey solid;
 }
+
+
 .overlay{
-position: fixed;
-top:50%;
-left:40%;
-width: 100%;
-max-width: 400px;
-margin: 0 auto;
-background-color: aquamarine;
-height: 200px;
 display: none;
-z-index: 1;
+font-size: 16px;
+position: fixed;
+z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+line-height: 1.5;
 }
 .popup-close{
     float: right;
+    color: #aaaaaa;
+    font-size: 50px;
+}
+.popup-close:hover,
+.popup-close:focus {
+    color: #cca88a;
+    text-decoration: none;
+    cursor: pointer;
 }
 .popup{
     text-align: center;
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px;
+    height: 350px;
+}
+.popup-return a:hover,
+.popup-end{
+    text-decoration-line: underline;
+    text-decoration-color:  #E0BEA2;
+    -moz-text-decoration-color:  #E0BEA2;
 }
 .popup-title{
     padding-top: 60px;
