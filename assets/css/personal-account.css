@@ -106,11 +106,16 @@ input {
     max-width: 320px;
     font-size: 10px;
     }
-    .inputs {
+
+    .account__items {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
     }
+
+    .inputs {
+    flex-direction: column;
+    }
+
     input {
     width: 300px;
     margin: 10%;
