@@ -1,39 +1,57 @@
 @import "header.css";
 @import "footer.css";
+@import "list.css";
+
 body {
-  margin: 25px 150px;
-  font-size: 16px;
+    margin: 25px 150px;
+    font-size: 16px;
+}
+
+.favorites-title {
+    text-align: center;
+    margin-top: 10%;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.card-para__price {
+    text-align: center;
+}
+
+.card__colours {
+    justify-content: center;
 }
 
 .transition {
-  display: flex;
-  margin-top: 31px;
+    display: flex;
+    margin-top: 31px;
 }
 .transition__arrow {
-  color: #E0BEA2;
-  margin: 0 13px;
+    color: #e0bea2;
+    margin: 0 13px;
 }
 
 .favorites-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 30px;
-  column-gap: 15px;
-  margin-bottom: 105px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+    column-gap: 15px;
+    margin-bottom: 105px;
 }
 
 .header__menuBurger.show {
-  background-color: white;
+    background-color: white;
+    z-index: 1;
 }
 
 @media (max-width: 1023px) {
-  body {
-    margin: 0px 20px;
-    font-size: 16px;
-  }
-  .favorites-container {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
-    margin-bottom: 74px;
-  }
+    body {
+        margin: 0px 20px;
+        font-size: 16px;
+    }
+    .favorites-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+        margin-bottom: 74px;
+    }
 }

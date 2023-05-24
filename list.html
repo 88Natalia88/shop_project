@@ -1,94 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/list.css">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-<body>
-    <div class="body">
-        <nav class="nav-desktop">
-            <div class="nav__title">
-                Каталог
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/list.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_container">
+                <div class="header__logoBurger">
+                    <img
+                        class="header__logoBurger_img"
+                        src="assets/images/logo/header.svg"
+                        alt="menu"
+                    />
+                </div>
+                <!-- <nav class="header__menuBurger">
+                <h4 class="burger__head">Каталог</h4>
+                <a href="#"><p>New</p></a>
+                <a href="#"><p>Bestsellers</p></a>
+                <a href="#"><p>Верхняя одежда</p></a>
+                <a href="#"><p>Шубы</p></a>
+                <a href="#"><p>Тренчи</p></a>
+                <a href="#"><p>Пальто</p></a>
+                <a href="#"><p>Пуховики и жилеты</p></a>
+                <a href="#"><p>Костюмы</p></a>
+                <a href="#"><p>Жакеты</p></a>
+                <a href="#"><p>Платья</p></a>
+                <a href="#"><p>Рубашки и блузы</p></a>
+                <a href="#"><p>Юбки</p></a>
+                <a href="#"><p>Футболки и топы</p></a>
+                <a href="#"><p>Аксессуары</p></a>
+                <a href="#"><p>Sale</p></a>
+                <a href="#"><p>Summer</p></a>
+                <a href="#"><p>Посмотреть всё</p></a>
+            </nav> -->
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">NEW</a>
+                        </li>
+                        <li class="menu__item">
+                            <span class="menu__list_spanCatalog"
+                                ><a href="#" class="menu__link"
+                                    >КАТАЛОГ</a
+                                ></span
+                            >
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">О НАС</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="header__logo">
+                    <img
+                        class="header__logo_img"
+                        src="assets/images/logo/YANKI.svg"
+                        alt="Yanki"
+                    />
+                </a>
+                <div class="header__drop">
+                    <select
+                        name="header__selectLanguage"
+                        class="header__selectLanguage"
+                    >
+                        <option value="1" selected>EN</option>
+                        <option value="2">RU</option>
+                        <option value="3">UK</option>
+                    </select>
+                    <select
+                        name="header__selectCurrency"
+                        class="header__selectCurrency"
+                    >
+                        <option value="1" selected>USD</option>
+                        <option value="2">RUB</option>
+                        <option value="3">UAH</option>
+                        <option value="4">EUR</option>
+                    </select>
+                </div>
+                <div class="header__menuIcons">
+                    <a href="#" class="header__logoSearch header__logo_link">
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/search.svg"
+                            alt="search link"
+                        />
+                    </a>
+                    <a
+                        href="./personal-account.html"
+                        class="header__logoContacts header__logo_link"
+                    >
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/contacts.svg"
+                            alt="contacts link"
+                        />
+                    </a>
+                    <a
+                        href="./favorites.html"
+                        class="header__logoFav header__logo_link"
+                    >
+                        <img
+                            src="assets/images/logo/favorite.svg"
+                            class="header__logo_icon"
+                            alt="favorite_category link"
+                        />
+                    </a>
+                    <a href="#" class="header__logoCart header__logo_link">
+                        <img
+                            class="header__logo_icon"
+                            src="assets/images/logo/cart.svg"
+                            alt="cart link"
+                        />
+                    </a>
+                </div>
             </div>
+        </header>
+        <div class="body">
+            <nav class="nav-desktop">
+                <div class="nav__title">Каталог</div>
 
-            <ul class="nav__menu">
-                <li class="nav__menu-item">
-                    <a href="">New</a>
-                </li>
-                <li class="nav__menu-item">
-                    Bestsellers
-                </li>
-                <li class="nav__menu-item">
-                    Верхняя одежда  
-                </li>
-                <li class="nav__menu-item">
-                    Шубы
-                </li>
-                <li class="nav__menu-item">
-                    Тренчи
-                </li>
-                <li class="nav__menu-item">
-                    Пальто
-                </li>
-                <li class="nav__menu-item">
-                    Пуховики и жилеты
-                </li>
-                <li class="nav__menu-item">
-                    Костюмы
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <div class="filters-desktop">
-                <div class="filter-item select__wrap">
-                    <img src="assets/images/icons/arrow-down.svg" alt="" class="select__arrow">
-                    <select name="size" id="size" class="select__select">
-                        <option value="" class="select__option">Размер</option>
-                        <option value="xs" class="select__option">XXS</option>
-                        <option value="xs" class="select__option">XS</option>
-                        <option value="x" class="select__option">X</option>
-                        <option value="m" class="select__option">M</option>
-                        <option value="l" class="select__option">L</option>
-                        <option value="l" class="select__option">XL</option>
-                        <option value="l" class="select__option">XXL</option>
-                    </select>
-                </div>
-                
-                <div class="filter-item select__wrap">
-                    <img src="assets/images/icons/arrow-down.svg" alt="" class="select__arrow">
-                    <select name="colour" id="colour" class="select__select">
-                        <option value="" class="select__option">Цвет</option>
-                        <option value="white" class="select__option">Белый</option>
-                        <option value="navy" class="select__option">Синий</option>
-                        <option value="beige" class="select__option">Беж</option>
-                    </select>
-                </div>
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <a href="">New</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Bestsellers</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Верхняя одежда</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Шубы</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Тренчи</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Пальто</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Пуховики и жилеты</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Костюмы</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Жакеты</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Платья</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Рубашки и блузы</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Юбки</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Футболки и топы</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Аксессуары</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Sale</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Summer</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="">Посмотреть всё</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="filters-desktop">
+                    <div class="filter-item select__wrap">
+                        <img
+                            src="assets/images/icons/arrow-down.svg"
+                            alt=""
+                            class="select__arrow"
+                        />
+                        <select name="size" id="size" class="select__select">
+                            <option value="" class="select__option">
+                                Размер
+                            </option>
+                            <option value="xs" class="select__option">
+                                XXS
+                            </option>
+                            <option value="xs" class="select__option">
+                                XS
+                            </option>
+                            <option value="x" class="select__option">X</option>
+                            <option value="m" class="select__option">M</option>
+                            <option value="l" class="select__option">L</option>
+                            <option value="l" class="select__option">XL</option>
+                            <option value="l" class="select__option">
+                                XXL
+                            </option>
+                        </select>
+                    </div>
 
-                <div class="filter-item select__wrap">
-                    <img src="assets/images/icons/arrow-down.svg" alt="" class="select__arrow">
-                    <select name="price" id="price" class="select__select">
-                        <option value="" class="select__option">Цена</option>
-                    </select>
-                </div>
+                    <div class="filter-item select__wrap">
+                        <img
+                            src="assets/images/icons/arrow-down.svg"
+                            alt=""
+                            class="select__arrow"
+                        />
+                        <select
+                            name="colour"
+                            id="colour"
+                            class="select__select"
+                        >
+                            <option value="" class="select__option">
+                                Цвет
+                            </option>
+                            <option value="white" class="select__option">
+                                Белый
+                            </option>
+                            <option value="navy" class="select__option">
+                                Синий
+                            </option>
+                            <option value="beige" class="select__option">
+                                Беж
+                            </option>
+                        </select>
+                    </div>
 
-                <div class="filter-item select__wrap">
-                    <img src="assets/images/icons/arrow-down.svg" alt="" class="select__arrow">
-                    <select name="sort" id="sort" class="select__select">
-                        <option value="" class="select__option">Сортировать по</option>
-                    </select>
+                    <div class="filter-item select__wrap">
+                        <img
+                            src="assets/images/icons/arrow-down.svg"
+                            alt=""
+                            class="select__arrow"
+                        />
+                        <select name="price" id="price" class="select__select">
+                            <option value="" class="select__option">
+                                Цена
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="filter-item select__wrap">
+                        <img
+                            src="assets/images/icons/arrow-down.svg"
+                            alt=""
+                            class="select__arrow"
+                        />
+                        <select name="sort" id="sort" class="select__select">
+                            <option value="" class="select__option">
+                                Сортировать по
+                            </option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <main>
-                <div class="cards-grid">
-                    <div class="card">
+                <main>
+                    <div class="cards-grid" id="cards-container">
+                        <!-- <div class="card">
                         <div class="card__image-wrap">
                             <img src="assets/images/card1.png" alt="" class="card__image"></img>
 
@@ -297,10 +474,116 @@
                             <li class="card__colour card__colour--navy"></li>
                             <li class="card__colour card__colour--beige"></li>
                         </ul>
+                    </div> -->
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <h4>КОМПАНИЯ</h4>
+                    <a href="#"><p class="footer__subtitle">О нас</p></a>
+                    <a href="./contacts.html"
+                        ><p class="footer__subtitle">Контакты</p></a
+                    >
+                </div>
+                <div class="footer__column">
+                    <h4>ПОЛЕЗНОЕ</h4>
+                    <a href="./payment-and-delivery.html"
+                        ><p class="footer__subtitle">Оплата и доставка</p></a
+                    >
+                    <a href="./exchange-and-return.html"
+                        ><p class="footer__subtitle">Условия возврата</p></a
+                    >
+                    <a href="#"
+                        ><p class="footer__subtitle">Бонусная система</p></a
+                    >
+                </div>
+                <div class="footer__column">
+                    <h4>ПОКУПАТЕЛЮ</h4>
+                    <a href="./favorites.html"
+                        ><p class="footer__subtitle">Избранное</p></a
+                    >
+                    <a href="#"
+                        ><p class="footer__subtitle">Публичная оферта</p></a
+                    >
+                    <a href="#"
+                        ><p class="footer__subtitle">
+                            Политика конфиденциальности
+                        </p></a
+                    >
+                </div>
+                <div class="footer__column">
+                    <h4>КОНТАКТЫ</h4>
+                    <p>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/inst.svg"
+                                alt="SVG Icon"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/telegram.svg"
+                                alt="SVG Icon"
+                        /></a>
+                    </p>
+                    <p class="footer__subtitle">+38(073) 096 36 44</p>
+                    <a href="#"
+                        ><p class="footer__subtitle">info@yanki.com</p></a
+                    >
+                </div>
+            </div>
+            <div class="footer__mobile">
+                <div class="footer__mobile_item">
+                    КОМПАНИЯ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="#"><p>О нас</p></a>
+                        <a href="./contacts.html"><p>Контакты</p></a>
                     </div>
                 </div>
-            </main>
-        </div>
-    </div>
-</body>
+                <div class="footer__mobile_item">
+                    ПОЛЕЗНОЕ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="./payment-and-delivery.html"
+                            ><p>Оплата и доставка</p></a
+                        >
+                        <a href="./exchange-and-return.html"
+                            ><p>Условия возврата</p></a
+                        >
+                        <a href="#"><p>Бонусная система</p></a>
+                    </div>
+                </div>
+                <div class="footer__mobile_item">
+                    ПОКУПАТЕЛЮ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="./favorites.html"><p>Избранное</p></a>
+                        <a href="#"><p>Публичная оферта</p></a>
+                        <a href="#"><p>Политика конфиденциальности</p></a>
+                    </div>
+                </div>
+                <div class="footer__mobile_contacts">
+                    КОНТАКТЫ
+                    <p>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/inst.svg"
+                                alt="SVG Icon"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/telegram.svg"
+                                alt="SVG Icon"
+                        /></a>
+                    </p>
+                    <p>+38(073) 096 36 44</p>
+                    <a href="#">info@yanki.com</a>
+                </div>
+            </div>
+            <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
+        </footer>
+        <script src="./assets/js/header.js"></script>
+        <script src="./assets/js/list.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
 </html>
