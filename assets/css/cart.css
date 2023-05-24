@@ -45,7 +45,17 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
+.cart-item img{
+    width: 150px;
+    height: 200px;
+}
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-item-quantity{
+    display: flex;
+}
 .decor__title{
 font-style: normal;
 font-weight: 300;

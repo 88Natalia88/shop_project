@@ -33,17 +33,6 @@
 .product-card {
     border: 2px grey solid;
 }
-.cart-item img{
-    width: 150px;
-    height: 200px;
-}
-.cart-item{
-    display: flex;
-    justify-content: space-between;
-}
-.cart-item-quantity{
-    display: flex;
-}
 .overlay{
 position: fixed;
 top:50%;

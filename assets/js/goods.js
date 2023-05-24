@@ -2,10 +2,8 @@
 let cards = document.querySelector('.cards');
 let overlay = document.querySelector('.overlay');
 let close = document.querySelector('.popup-close');
-​
 getProducts();
 //api
-​
 async function getProducts() {
     const response = await fetch('https://fakestoreapi.com/products');
     const productsArray = await response.json();
@@ -27,10 +25,8 @@ function renderProducts(productsArray) {
     <p class="cardDescription">Описание: ${card.description} </p>
     <button class="btn" data-id="${card.id}">Заказать</button></div>`;
     cards.innerHTML += cardInfo;
-​
     })
 }
-​
 //добавляем товар в localstorage
 function addToCart(event) {
     if (event.target.classList.contains('btn')) {
@@ -47,7 +43,6 @@ function addToCart(event) {
     };
     //console.log(typeof(productInfo.price))
     let productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || {};
-​
     if (productsInCart[id]) {
       //console.log(productsInCart[id]);
         productsInCart[id].quantity++;
@@ -61,7 +56,6 @@ function addToCart(event) {
     localStorage.setItem('productsInCart', JSON.stringify(productsInCart));
     }
 }
-​
 //закрываем модальное окно
 close.addEventListener('click', function () {
     overlay.style.display = 'none';

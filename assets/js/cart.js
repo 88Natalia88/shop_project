@@ -1,5 +1,5 @@
 //html
-let cards = document.querySelector('.cards');
+/*let cards = document.querySelector('.cards');
 let overlay = document.querySelector('.overlay');
 let close = document.querySelector('.popup-close');
 getProducts();
@@ -142,8 +142,90 @@ function removeProducts(event){
     }
 }
 
-document.addEventListener('click', removeProducts);
+document.addEventListener('click', removeProducts);*/
 /*
 function updateCartTotal(){
 
 }*/
+
+getProducts().then((productsArray) => {
+    changeProducts(productsArray)
+});
+renderShoppingCart();
+//корзина с товарами
+function renderShoppingCart() {
+    let cartElement = document.querySelector('.cart');
+    let productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || {};
+
+    cartElement.innerHTML = '';
+    Object.values(productsInCart).forEach((product) => {
+        console.log(product)
+        let cartInfo = '';
+        cartInfo = `<div class='cart-item' data-id="${product.id}">
+    <img src="${product.img}">
+    <h4 class="cart-item-title">${product.title}</h4>
+    <p class="cart-item-price">${product.price}</p>
+    <div class="cart-item-quantity">
+    <div><button class="items__minus minus" data-id="${product.id}">-</button></div>
+    <div class="items__current" data-counter="">${product.quantity}</div>
+    <div><button class="items__plus plus" data-id="${product.id}">+</button></div>		
+    </div>
+    <div class="button">
+    <button class="remove-cart-item" data-id="${product.id}">Удалить</button></div></div>`
+        cartElement.innerHTML += cartInfo;
+    });
+    //document.querySelector('.cart__empty').style.cssText = "display: none";
+    //document.querySelector('.hidden').classList = 'decor';
+}
+//api
+async function getProducts() {
+    const response = await fetch('https://fakestoreapi.com/products');
+    return await response.json();
+}
+//уменьшаем или увеличиваем количество товаров
+function changeProducts(productsArray) {
+    document.onclick = event => {
+        let productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || {};
+        //console.log(productsInCart)
+        if (event.target.classList.contains('plus')) {
+            let id = Number(event.target.dataset.id);
+            let price = Number(productsArray.find(item => item.id === id).price);
+            if (productsInCart[id]) {
+                productsInCart[id].quantity++;
+                productsInCart[id].price = Number(productsInCart[id].price) + price;
+            }
+        }
+        if (event.target.classList.contains('minus')) {
+            let id = Number(event.target.dataset.id);
+            let price = Number(productsArray.find(item => item.id === id).price);
+            if (productsInCart[id]) {
+                if (productsInCart[id].quantity > 1) {
+                    productsInCart[id].quantity--;
+                    productsInCart[id].price = Number(productsInCart[id].price) - price;
+                } else {
+                    removeProducts(event);
+                }
+            }
+        }
+        localStorage.setItem('productsInCart', JSON.stringify(productsInCart));
+        renderShoppingCart();
+    }
+}
+//удаляем товар из корзины
+function removeProducts(event) {
+    if (event.target.classList.contains('remove-cart-item')) {
+        let productsInCart = JSON.parse(localStorage.getItem('productsInCart')) || {};
+        let id = Number(event.target.dataset.id);
+        delete productsInCart[id];
+        localStorage.setItem('productsInCart', JSON.stringify(productsInCart));
+        const cartItems = document.querySelectorAll(".cart-item");
+        cartItems.forEach(item => {
+            if (item.dataset.id === id.toString()) {
+                item.remove();  // удаление соответствующего DOM-элемента
+            }
+        })
+        //document.querySelector('.cart__empty').style.cssText = "display: flex";
+        //updateCartTotal();  // Обновляем общую стоимость и количество товаров в корзине
+    }
+}
+document.addEventListener('click', removeProducts);
