@@ -169,9 +169,13 @@ form {
     text-align: center;
 }
 
+.header__menuBurger.show {
+    background-color: white;
+}
+
 @media (max-width: 1023px) {
     body {
-        margin: 0px 20px;
+        margin: 25px 20px;
         font-size: 16px;
     }
 

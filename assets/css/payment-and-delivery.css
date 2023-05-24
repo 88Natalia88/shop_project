@@ -1,14 +1,12 @@
 .body {
     max-width: 1440px;
-    margin: auto;
-    font-family: 'Raleway';
+    margin: 25px 150px;
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
     color: #252525;
-    border: solid 2px black;
-
 }
 
 .li {
@@ -20,14 +18,13 @@
 }
 
 .little-arrow-menu {
-    color: #E0BEA2;
+    color: #e0bea2;
     display: inline;
 }
 
 .payment-and-delivery {
-    margin: 20px 150px 20px 150px;
+    margin: 20px 0px 20px 0px;
 }
-
 
 .top-menu {
     margin: 40px 0 30px 0;
@@ -78,9 +75,15 @@
     align-self: center;
 }
 
+@media (max-width: 1023px) {
+    .body {
+        margin: 25px 20px;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1280px) {
     .payment-and-delivery {
-        margin: 20px 50px 20px 50px;
+        margin: 20px 0px 20px 0px;
     }
 
     .list-of-payment-and-delivery-conditions {
@@ -97,14 +100,13 @@
 }
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
-
     .body {
         font-size: 14px;
         line-height: 20px;
     }
 
     .payment-and-delivery {
-        margin: 20px 20px 20px 20px;
+        margin: 20px 0px 20px 0px;
     }
 
     .payment-and-delivery__items_h1 {
@@ -130,20 +132,17 @@
     .arrow-three__item {
         align-self: center;
     }
-
 }
 
 @media screen and (max-width: 375px) {
-
     .body {
         font-size: 14px;
         line-height: 20px;
     }
 
     .payment-and-delivery {
-        margin: 20px 20px 20px 20px;
+        margin: 20px 0px 20px 0px;
     }
-
 
     .top-menu {
         margin: 15px 0 15px 0;
@@ -161,7 +160,7 @@
     .list-of-payment-and-delivery-conditions {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr
+        grid-template-rows: 1fr;
     }
 
     .list-of-payment-and-delivery-conditions__items_Liqpay {

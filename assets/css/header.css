@@ -18,12 +18,6 @@ a {
   color: #252525;
 }
 
-ul,
-ol,
-li {
-  list-style: none;
-}
-
 h4 {
   font-weight: inherit;
 }
@@ -44,12 +38,16 @@ h4 {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 10px;
   text-align: left;
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.header__menuBurger a {
+  color: #252525;
+  text-shadow: 0.5px 0.5px 0.5px rgba(253, 253, 253, 0.5);
 }
 
 .header__logoBurger {
@@ -65,12 +63,17 @@ h4 {
   display: block;
   opacity: 1;
   transform: translateY(0);
+  background-color: transparent;
 }
 .header__menuBurger.show h4 {
   font-size: 1.4rem;
 }
-.header__menuBurger.show p {
+.header__menuBurger.show a {
+  display: block;
   margin: 20px 0;
+}
+.header__menuBurger.show a :hover {
+  color: #e0bea2;
 }
 
 .header_container {
@@ -96,7 +99,7 @@ h4 {
 }
 
 .header__logo {
-  width: 20%;
+  width: 15%;
   justify-content: center;
 }
 
@@ -123,6 +126,14 @@ select {
   background-color: transparent;
 }
 
+.header__logo_link {
+  position: relative;
+}
+
+.header__logo_link:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
 /* @media screen and (min-width: 768px) and (max-width: 1023px) {
 } */
 @media (max-width: 1023px) {
@@ -146,10 +157,6 @@ select {
   }
   .header__selectLanguage {
     margin: 0 1%;
-  }
-  .header__logo {
-    width: 25%;
-    margin-left: 10%;
   }
   .header__logo_img {
     width: 100%;

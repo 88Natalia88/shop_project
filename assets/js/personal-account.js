@@ -1,43 +1,31 @@
-function logout() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://example.com/logout", true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                console.log("Выход из аккаунта выполнен");
-                window.location.href = "http://example.com/login";
-            } else {
-                console.log("Ошибка выхода из аккаунта");
-            }
-        }
-    };
-    xhr.send(JSON.stringify({
-        token: "your_token"
-    }));
-}
+// Обработчик событий для формы с личными данными
+const accountForm = document.querySelector('#account-form');
+if (accountForm) {
+    accountForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Отмена отправки формы по умолчанию
 
-function updateInformation(event) {
-    event.preventDefault();
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://example.com/update_information", true);
+    const formData = new FormData(accountForm);
+    const name = formData.get('name');
+    const surname = formData.get('surname');
+    const email = formData.get('email');
+    const phone = formData.get('tel');
+    const city = formData.get('city');
+    const address = formData.get('house-address');
+
+    // Отправка данных на сервер
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/update-information');
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                console.log("Персональные данные обновлены");
-            } else {
-                console.log("Ошибка обновления персональных данных");
-            }
-        }
+    xhr.onload = function() {
+        alert('Данные успешно обновлены!');
     };
     xhr.send(JSON.stringify({
-        name: document.getElementsByName("name")[0].value,
-        surname: document.getElementsByName("surname")[0].value,
-        email: document.getElementsByName("email")[0].value,
-        phone: document.getElementsByName("phone")[0].value,
-        city: document.getElementsByName("city")[0].value,
-        address: document.getElementsByName("address")[0].value,
-        token: "your_token"
+        name: name,
+        surname: surname,
+        email: email,
+        phone: phone,
+        city: city,
+        address: address
     }));
-}
+    });
+}   
