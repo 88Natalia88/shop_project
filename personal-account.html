@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/personal-account.css">
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/authorization.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet">
@@ -132,19 +133,19 @@
             <form id="account-form" onsubmit="updateInformation(event)">
                 <p>Персональные данные:</p>
                     <div class="inputs">
-                        <input class="name" placeholder="Имя" required>
-                        <input class="surname" placeholder="Фамилия" required>
-                        <input type="email" placeholder="Электронная почта" required>
-                        <input type="tel" placeholder="Номер телефона" required>
+                        <input class="name" id="info-input" placeholder="Имя" required>
+                        <input class="surname" id="info-input" placeholder="Фамилия" required>
+                        <input type="email" id="info-input" placeholder="Электронная почта" required>
+                        <input type="tel" id="info-input" placeholder="Номер телефона" required>
                     </div>
                 <div class="address">
                     <p>Адрес доставки:</p>
                     <div class="inputs">
-                        <input class="city" placeholder="Город" required>
-                        <input class="house-address" placeholder="Адрес" required>
+                        <input class="city" id="info-input" placeholder="Город" required>
+                        <input class="house-address" id="info-input" placeholder="Адрес" required>
                     </div>
                 </div>
-                <button type="submit">Обновить информацию</button>
+                <button type="submit" id="submit-btn">Обновить информацию</button>
                 </form>
             </div> 
         </div>
@@ -223,6 +224,7 @@
         </div>
         <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
         </footer>
+    <script src="assets\js\authorization.js"></script>
     <script src="assets\js\header.js"></script>    
     <script src="assets\js\personal-account.js"></script>
 </body>

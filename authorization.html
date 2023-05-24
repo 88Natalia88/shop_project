@@ -68,6 +68,48 @@
                     <button type="submit">Войти</button>
         </div>
     </div>
+
+    <!-- Модальное окно для "Забыли пароль - код из сообщения" -->
+    <div id="code-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Забыли пароль?</h2>
+            <p class="modal-info">Код из сообщения:</p>
+            <input type="text" name="code" placeholder="Код*" required>
+            <div class="password">
+                <input type="password" class="password__input" name="password" placeholder="Ваш пароль*" required>
+                    <div class="password__btn"><img src="images\eye-icon.svg" alt="view">
+                    </div>
+                    <button type="submit">Установить пароль</button>
+        </div>
+    </div>
+
+<!-- Модальное окно для "Регистрация - 2 шаг" -->
+    <div id="register-modal-step2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация - шаг 2</h2>
+            <p class="modal-info">Мы отправили вам на почту код для подтверждения регистации. Введите его, пожалуйста</p>
+            <input type="text" name="code" placeholder="Код с e-mail*" required>
+            <button type="submit">Установить пароль</button>
+        </div>
+    </div>
+<!-- Модальное окно для "Забыли пароль - успешно" -->
+    <div id="password-changed-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Вы успешно сменили пароль!</p>
+        </div>    
+    </div>
+
+<!-- Модальное окно для "Регистрация - успешно" -->
+<div id="register-success-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Регистрация - успешно!</h1>
+        <p>Вы успешно зарегестрировались! Приятных покупок!</p>
+    </div>    
+</div>   
     
     <script src="assets\js\authorization.js"></script>      
 </body>

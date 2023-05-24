@@ -1,77 +1,75 @@
 //Показываем или скрываем пароль по нажатию на кнопку
 
 function showPassword() {
-    const passBtn = document.querySelector('.password__btn');
-    const passInput = document.querySelector('.password__input');
+  const passBtn = document.querySelector('.password__btn');
+  const passInput = document.querySelector('.password__input');
 
-    passBtn.addEventListener('click', () => {
-        passBtn.classList.toggle('active')
+  passBtn.addEventListener('click', () => {
+      passBtn.classList.toggle('active')
 
-        if (passInput.getAttribute('type') === 'password') {
-            passInput.setAttribute('type', 'text')
-        } else {
-            passInput.setAttribute('type', 'password')
-        }
-    })
+      if (passInput.getAttribute('type') === 'password') {
+          passInput.setAttribute('type', 'text')
+      } else {
+          passInput.setAttribute('type', 'password')
+      }
+  })
 }    
 showPassword();
 
 //Модальное окно
 
-const loginForm = document.getElementById("login-form");
 const loginModal = document.getElementById("login-modal");
+const forgotPasswordModal = document.getElementById("forgot-password-modal");
+const registerModal = document.getElementById("register-modal");
+const codeModal = document.getElementById("code-modal");
+const registerModalStep2 = document.getElementById("register-modal-step2");
+const passwordChangedModal = document.getElementById("password-changed-modal");
+const registerSuccessModal = document.getElementById("register-success-modal")
+
+// Кнопки, которые открывают соответствующее модальное окно
 const loginButton = document.getElementById("login-button");
-const closeButton = loginModal.getElementsByClassName("close")[0];
-
-// Отображаем всплывающее окно при нажатии на кнопку
-//loginButton.onclick = function() {
-//    loginModal.style.display = "block";
-//};
-
-// Скрываем всплывающее окно при нажатии на кнопку закрытия
-closeButton.onclick = function() {
-    loginModal.style.display = "none";
-};
-
-// Скрываем всплывающее окно при нажатии за его пределами
-window.onclick = function(event) {
-    if (event.target == loginModal) {
-        loginModal.style.display = "none";
-    }
-};
-
-//Модальные окна "Забыли пароль?" и "Нет аккаунта?"
 const forgotPasswordLink = document.querySelector("#forgot-password-link");
-const forgotPasswordModal = document.querySelector("#forgot-password-modal");
-const closeForgotPasswordModal = forgotPasswordModal.querySelector(".close");
-
 const registerLink = document.querySelector("#register-link");
-const registerModal = document.querySelector("#register-modal");
-const closeRegisterModal = registerModal.querySelector(".close");
 
-forgotPasswordLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    forgotPasswordModal.style.display = "block";
-  });
+// Функции для открытия модальных окон
+function openModal(modal) {
+modal.style.display = "block";
+}
 
-  closeForgotPasswordModal.addEventListener("click", function () {
-    forgotPasswordModal.style.display = "none";
-  });
+// Обработчик событий для открытия модального окна "Авторизация"
+loginButton.addEventListener("click", () => openModal(loginModal));
 
-  registerLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    registerModal.style.display = "block";
-  });
+// Обработчики событий для открытия модальных окон "Забыли пароль?" и "Нет аккаунта?"
+forgotPasswordLink.addEventListener("click", (event) => {
+event.preventDefault();
+openModal(forgotPasswordModal);
+});
 
-  closeRegisterModal.addEventListener("click", function () {
-    registerModal.style.display = "none";
-  });
+registerLink.addEventListener("click", (event) => {
+event.preventDefault();
+openModal(registerModal);
+});
 
-  window.addEventListener("click", function (event) {
-    if (event.target == forgotPasswordModal) {
-      forgotPasswordModal.style.display = "none";
-    } else if (event.target == registerModal) {
-      registerModal.style.display = "none";
-    }
-  });
+// Функции для закрытия модальных окон
+function closeModal(modal) {
+modal.style.display = "none";
+}
+
+// Добавляем обработчики событий для закрытия модальных окон
+const closeButtons = document.querySelectorAll(".close");
+const modals = [loginModal, forgotPasswordModal, registerModal, codeModal, registerModalStep2, passwordChangedModal, registerSuccessModal];
+
+closeButtons.forEach((button) => {
+button.addEventListener("click", () => {
+  modals.forEach((modal) => closeModal(modal));
+});
+});
+
+window.addEventListener("click", (event) => {
+modals.forEach((modal) => {
+  if (event.target === modal) {
+    closeModal(modal);
+  }
+});
+});
 

@@ -43,7 +43,7 @@
     padding: 0;
 }
 
-button {
+#submit-btn {
     width: 100%;
     padding: 12px;
     cursor: pointer;
@@ -61,8 +61,7 @@ button {
     text-align: start;
 }
 
-input {
-    width: 25%;
+#info-input {
     margin: 5px;
     height: 25px;
     font-size: 13px;
@@ -70,7 +69,6 @@ input {
 }
 
 .city, .house-address {
-    width: 50%;
     margin-left: 0;
     margin-right: 0;
 }
@@ -102,9 +100,11 @@ input {
     font-size: 11px;
     margin: 0;
     }
-    button {
+
+    #submit-btn {
     max-width: 320px;
     font-size: 12px;
+    margin-left: 10px;
     }
 
     .account__items {
@@ -116,9 +116,8 @@ input {
     flex-direction: column;
     }
 
-    input {
+    #info-input {
     width: 300px;
-    margin: 10%;
     font-size: 14px;
     height: 20px;
     text-align: center;
