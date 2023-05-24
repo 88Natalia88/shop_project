@@ -1,8 +1,4 @@
 @import "normalize.css";
-footer {
-  margin: 2%;
-}
-
 .footer__container {
   width: 100%;
   display: flex;
@@ -15,7 +11,7 @@ footer {
 
 .footer__column {
   flex: 1;
-  padding: 20px;
+  padding: 20px 20px 20px 0;
 }
 .footer__column p {
   margin: 5% 0;
@@ -24,6 +20,12 @@ footer {
 .footer__rights {
   text-align: center;
   font-size: 0.8rem;
+}
+
+.footer__subtitle {
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .footer__mobile {
@@ -74,4 +76,4 @@ footer {
   .footer__container {
     display: none;
   }
-}/*# sourceMappingURL=footer.css.map */
+}
