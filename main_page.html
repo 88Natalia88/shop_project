@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main_page_style.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,13 +47,13 @@
             <li class="menu__item"><a href="#" class="menu__link">NEW</a></li>
             <li class="menu__item">
               <span class="menu__list_spanCatalog"
-                ><a href="#" class="menu__link">КАТАЛОГ</a></span
+                ><a href="goods.html" class="menu__link">КАТАЛОГ</a></span
               >
             </li>
             <li class="menu__item"><a href="#" class="menu__link">О НАС</a></li>
           </ul>
         </nav>
-        <a href="#" class="header__logo">
+        <a href="http://127.0.0.1:5501/main_page.html" class="header__logo">
           <img
             class="header__logo_img"
             src="assets/images/logo/white/YANKI.svg"
@@ -81,7 +82,7 @@
             />
           </a>
           <a
-            href="http://127.0.0.1:5501/personal-account.html"
+            href="authorization.html"
             class="header__logoContacts header__logo_link"
           >
             <img
@@ -90,20 +91,14 @@
               alt="contacts link"
             />
           </a>
-          <a
-            href="http://127.0.0.1:5501/favorites.html"
-            class="header__logoFav header__logo_link"
-          >
+          <a href="favorites.html" class="header__logoFav header__logo_link">
             <img
               src="assets/images/logo/white/fav.svg"
               class="header__logo_icon"
               alt="favorite_category link"
             />
           </a>
-          <a
-            href="http://127.0.0.1:5501/cart.html"
-            class="header__logoCart header__logo_link"
-          >
+          <a href="cart.html" class="header__logoCart header__logo_link">
             <img
               class="header__logo_icon"
               src="assets/images/logo/white/cart.svg"
@@ -153,12 +148,12 @@
         <div class="footer__column">
           <h4>КОМПАНИЯ</h4>
           <a href="#"><p>О нас</p></a>
-          <a href="#"><p>Контакты</p></a>
+          <a href="contacts.html"><p>Контакты</p></a>
         </div>
         <div class="footer__column">
           <h4>ПОЛЕЗНОЕ</h4>
-          <a href="#"><p>Оплата и доставка</p></a>
-          <a href="#"><p>Условия возврата</p></a>
+          <a href="payment-and-delivery.html"><p>Оплата и доставка</p></a>
+          <a href="exchange-and-return.html"><p>Условия возврата</p></a>
           <a href="#"><p>Бонусная система</p></a>
         </div>
         <div class="footer__column">
@@ -186,21 +181,21 @@
           КОМПАНИЯ &bigtriangledown;
           <div class="footer__mobile_wrapItem">
             <a href="#"><p>О нас</p></a>
-            <a href="#"><p>Контакты</p></a>
+            <a href="contacts.html"><p>Контакты</p></a>
           </div>
         </div>
         <div class="footer__mobile_item">
           ПОЛЕЗНОЕ &bigtriangledown;
           <div class="footer__mobile_wrapItem">
-            <a href="#"><p>Оплата и доставка</p></a>
-            <a href="#"><p>Условия возврата</p></a>
+            <a href="payment-and-delivery.html"><p>Оплата и доставка</p></a>
+            <a href="exchange-and-return.html"><p>Условия возврата</p></a>
             <a href="#"><p>Бонусная система</p></a>
           </div>
         </div>
         <div class="footer__mobile_item">
           ПОКУПАТЕЛЮ &bigtriangledown;
           <div class="footer__mobile_wrapItem">
-            <a href="#"><p>Избранное</p></a>
+            <a href="favorites.html"><p>Избранное</p></a>
             <a href="#"><p>Публичная оферта</p></a>
             <a href="#"><p>Политика конфиденциальности</p></a>
           </div>
@@ -219,8 +214,8 @@
           <a href="#">info@yanki.com</a>
         </div>
       </div>
-      <p class="footer__item">©️ 2021 Yanki. All rights reserved</p>
+      <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
     </footer>
-    <script type="module" src="assets/js/main_page_script.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
   </body>
 </html>

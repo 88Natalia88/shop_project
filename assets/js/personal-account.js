@@ -28,6 +28,4 @@ if (accountForm) {
         address: address
     }));
     });
-}
-    
-    
+}   
