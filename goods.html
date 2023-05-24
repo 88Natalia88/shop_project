@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/goods.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap"
         rel="stylesheet" />
     <title>YANKI</title>
-    <script type="module" src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/cart.js"></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@
               <li class="menu__item"><a href="#" class="menu__link">NEW</a></li>
               <li class="menu__item">
                 <span class="menu__list_spanCatalog"
-                  ><a href="#" class="menu__link">КАТАЛОГ</a></span
+                  ><a href="goods.html" class="menu__link">КАТАЛОГ</a></span
                 >
               </li>
               <li class="menu__item"><a href="#" class="menu__link">О НАС</a></li>
@@ -116,24 +117,27 @@
           </div>
         </div>
       </header>
-  
-      <script type="module" src="assets/js/header.js"></script>
-
+<section class="cardsContainer">
+    <div class="cart__path">
+        <a href="index.html">Главная</a>
+        <span>></span>
+        <a href="goods.html">Каталог</a>
+    </div>
     <div class="cards">
 
-    </div>
-    <div class="overlay">
-        <div class="popup">
-            <div class="popup-close">&times;</div>
-            <div class="popup-title">Товар добавлен в корзину</div>
-            <div class="popup-return">
-                <a href="index.html">Вернуться за покупками</a>
-            </div>
-            <div class="popup-end">
-                <a href="cart.html">Перейти в корзину</a>
-            </div>
+</div>
+<div class="overlay">
+    <div class="popup">
+        <div class="popup-close">&times;</div>
+        <div class="popup-title">Товар добавлен в корзину</div>
+        <div class="popup-return">
+            <a href="index.html">Вернуться за покупками</a>
+        </div>
+        <div class="popup-end">
+            <a href="cart.html">Перейти в корзину</a>
         </div>
     </div>
+</div></section>
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__column">
@@ -218,9 +222,10 @@
         <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
     </footer>
     <body>
-        <script type="module" src="assets/js/footer.js"></script>    
-    <script src="assets/js/cart.js"></script>
-    
+
+    <script type="module" src="assets/js/header.js"></script>
+    <script type="module" src="assets/js/footer.js"></script>
+    <script src="assets/js/cart.js"></script>    
 </body>
 
 </html>

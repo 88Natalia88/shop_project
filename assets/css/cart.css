@@ -1,3 +1,5 @@
+@import "header.css";
+@import "footer.css";
 .cart__empty {
     max-width: 1440px;
     width: 100%;
@@ -19,7 +21,16 @@
     flex-direction: column;
     align-items: center;
 }
+.cart__path {
+    width: 100%;
+    max-width: 1440px;
+    margin: 20px auto 30px auto;
+}
 
+.cart__path span {
+    margin: 0 11px 0 11px;
+    color: #E0BEA2;
+}
 .cart__empty-button a {
     display: block;
     color: #ffff;
@@ -35,16 +46,6 @@
     padding-bottom: 20px;
 }
 
-.cart__path {
-    width: 100%;
-    max-width: 1440px;
-    margin: 20px auto 30px auto;
-}
-
-.cart__path span {
-    margin: 0 11px 0 11px;
-    color: #E0BEA2;
-}
 .decor__title{
 font-style: normal;
 font-weight: 300;
@@ -186,57 +187,8 @@ margin-bottom: 15px;
     text-decoration-color:  #E0BEA2;
     -moz-text-decoration-color:  #E0BEA2;
 }
+/*
 .hidden{
     display: none;
 }
-
-
-/*стили для карточек*/
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-row-gap: 50px;
-    grid-column-gap: 50px;
-}
-
-.cards img {
-    width: 200px;
-    height: 300px;
-}
-
-.product-card {
-    border: 2px grey solid;
-}
-.cart-item img{
-    width: 150px;
-    height: 200px;
-}
-.cart-item{
-    display: flex;
-    justify-content: space-between;
-}
-.cart-item-quantity{
-    display: flex;
-}
-.overlay{
-position: fixed;
-top:50%;
-left:40%;
-width: 100%;
-max-width: 400px;
-margin: 0 auto;
-background-color: aquamarine;
-height: 200px;
-display: none;
-z-index: 1;
-}
-.popup-close{
-    float: right;
-}
-.popup{
-    text-align: center;
-}
-.popup-title{
-    padding-top: 60px;
-}
+*/
