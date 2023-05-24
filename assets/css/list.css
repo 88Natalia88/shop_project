@@ -1,8 +1,14 @@
+@import "header.css";
+@import "footer.css";
 :root {
-    --font-family-base: 'Raleway', sans-serif;
+    --font-family-base: "Raleway", sans-serif;
     --font-color-base: #252525;
     --font-size-base: 16px;
     --line-height-base: 19px;
+}
+
+body {
+    margin: 25px 150px;
 }
 
 p {
@@ -17,15 +23,39 @@ strong {
     font-weight: 700;
 }
 
-.body {
+/* .body {
     padding: 20px;
+} */
+
+.cards-grid {
+    margin-bottom: 105px;
 }
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #e0bea2;
+    font-size: 12px;
+    border: 1px solid #e0bea2;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal-button:hover {
+    background-color: #cca88a !important;
+}
+
+@media (max-width: 1023px) {
+    body {
+        margin: 0px 20px;
+    }
+}
+
 @media (min-width: 426px) {
     .body {
         padding-top: 30px;
-        margin-left: auto;
+        /* margin-left: auto;
         margin-right: auto;
-        width: fit-content;
+        width: fit-content; */
         display: grid;
         grid-template-columns: 150px 1fr;
         gap: 30px;
@@ -102,7 +132,7 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #E0BEA2;
+    background: #e0bea2;
     border-radius: 0px 0px 0px 20px;
 }
 @media (max-width: 425px) {
@@ -130,16 +160,16 @@ strong {
     position: relative;
     margin-top: 15px;
 }
-.card__name.card__name--new::after {
-    content: 'new';
+/* .card__name.card__name--new::after {
+    content: "new";
     position: absolute;
     top: 0;
     left: calc(100% + 10px);
-    color: #E0BEA2;
+    color: #e0bea2;
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
-}
+} */
 
 .card__price {
     margin-top: 5px;
@@ -148,7 +178,7 @@ strong {
 .card__sizes {
     margin-top: 5px;
     display: flex;
-    opacity: .5
+    opacity: 0.5;
 }
 
 .card__size:not(:last-child) {
@@ -171,11 +201,11 @@ strong {
 }
 
 .card__colour.card__colour--navy {
-    background-color: #6F83A4;
+    background-color: #6f83a4;
 }
 
 .card__colour.card__colour--beige {
-    background-color: #F1DDAA;
+    background-color: #f1ddaa;
 }
 
 .select__wrap {
@@ -201,4 +231,11 @@ strong {
     position: absolute;
     right: 0;
     z-index: -1;
+}
+
+@media (min-width: 1440px) {
+    .card__image {
+        width: 310px;
+        height: 360px;
+    }
 }
