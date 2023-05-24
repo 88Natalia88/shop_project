@@ -82,6 +82,17 @@ body {
   text-align: center;
 }
 
+.footer {
+  margin: 25px 150px;
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    margin: 0px 20px;
+    font-size: 16px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
     background: url("../images/photos/backgr22.jpg");
