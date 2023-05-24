@@ -1,0 +1,203 @@
+
+@import "header.css";
+@import "footer.css";
+
+body {
+    background-color: #FFFFFF;
+  }
+
+  .up_card{
+    display: flex;
+    flex-flow: row;
+    padding-top: 2%;
+    padding-right: 10%;
+  }
+
+  .cart__path{
+    padding-top: 2%;
+    width: 35%;
+    padding-left: 14.5%;
+  }
+
+  .card_size_style {
+    display: block;
+    width: 150%;
+    position: relative;
+}
+
+.card_size_style:hover{
+  color: #E0BEA2;
+}
+  
+  .card_description{
+    padding-top: 2%;
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    padding: 10px;
+    justify-content:space-between;
+    flex-wrap: wrap;
+  }
+
+  .container1 {
+    width: 50%;
+    padding-left: 10%;
+    display: flex;
+    justify-content:center;
+  }
+
+  .card_size_style{
+    width: 100%;
+  }
+
+  .card_name{
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #252525;
+  }
+
+
+  .card_price_text{
+    font-weight: bold;
+  }
+
+  .container2 {
+    width: 50%;
+    padding-left: 10%;
+    display: flex;
+    justify-content: left;
+    
+  }
+
+  .container3 {
+    width: 50%;
+    padding-left: 15%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding-top: 5%;
+  }
+
+  .full_description{
+    display: flex;
+    flex-flow:row;
+    }
+
+
+  .full_closes{
+    display: flex;
+    padding: 10px;
+  }
+
+  .full {
+    display: flex;
+    flex-flow:column;
+    padding: 10px;
+  }
+
+  .left, 
+  .full_left{
+    display: flex;
+    flex-flow:row;
+    padding: 10px;
+  }
+
+  .right {
+    display: flex;
+    width: 60%;
+    padding: 10px;
+
+  }
+
+  .left_photos{
+    width: 15%;
+  }
+
+  #to_favourite{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-flow:row;
+  }
+ 
+  #to_fav_text{
+    color: #252525;
+  }
+
+  .card_name{
+    margin-right: 5px;
+  }
+
+  .card_new{
+    margin-left: 5px;
+  }
+
+  .card_size{
+    display: flex;
+    flex-flow:row;
+  }
+
+  .card_size_choise{
+    margin-right: 5px;
+  }
+
+  .ellipse_elements{
+    display: flex;
+    flex-flow:row;
+  }
+
+  .ellipse{
+    margin-right: 5px;
+  }
+
+  .full_look_elements{
+    display: flex;
+    flex-flow:row;
+  }
+
+  .buttons{
+    display: flex;
+    flex-flow: row;
+    
+  }
+ 
+  .to_cart{
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #E0BEA2;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    flex: 1;
+    margin: 0.5px;
+    padding: 16px, 81px, 17px, 81px;
+    
+  }
+
+  .to_favourite{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #fffefd;
+    border-width: 1px;
+    border-color:black ;
+    flex: 1;
+    margin: 0.5px;
+    width: 35%;
+    padding: 16px, 81px, 17px, 81px;
+    
+  }
+
+  .to_favourite:hover{
+    background-color: white;
+  }
+
+  
