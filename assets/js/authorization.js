@@ -27,7 +27,7 @@ const passwordChangedModal = document.getElementById("password-changed-modal");
 const registerSuccessModal = document.getElementById("register-success-modal")
 
 // Кнопки, которые открывают соответствующее модальное окно
-const loginButton = document.getElementById("login-button");
+const logoutLink = document.getElementById("logout-link");
 const forgotPasswordLink = document.querySelector("#forgot-password-link");
 const registerLink = document.querySelector("#register-link");
 
@@ -37,7 +37,7 @@ modal.style.display = "block";
 }
 
 // Обработчик событий для открытия модального окна "Авторизация"
-loginButton.addEventListener("click", () => openModal(loginModal));
+logoutLink.addEventListener("click", () => openModal(loginModal));
 
 // Обработчики событий для открытия модальных окон "Забыли пароль?" и "Нет аккаунта?"
 forgotPasswordLink.addEventListener("click", (event) => {

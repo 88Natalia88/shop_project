@@ -145,9 +145,9 @@
                         Личные данные
                     </p>
                     <a
-                        href="authorization.html"
-                        class="account__transition_item"
-                        onclick="logout()"
+                        href=""
+                        class="account__transition_item" id="logout-link"
+                        onclick="logout(event)"
                         >Выйти</a
                     >
                 </div>
@@ -156,26 +156,24 @@
                         <p>Персональные данные:</p>
                         <div class="inputs">
                             <input
-                                class="name"
-                                id="info-input"
+                                class="info-input"
                                 placeholder="Имя"
                                 required
                             />
                             <input
-                                class="surname"
-                                id="info-input"
+                                class="info-input"
                                 placeholder="Фамилия"
                                 required
                             />
                             <input
                                 type="email"
-                                id="info-input"
+                                class="info-input"
                                 placeholder="Электронная почта"
                                 required
                             />
                             <input
                                 type="tel"
-                                id="info-input"
+                                class="info-input"
                                 placeholder="Номер телефона"
                                 required
                             />
@@ -184,14 +182,12 @@
                             <p>Адрес доставки:</p>
                             <div class="inputs">
                                 <input
-                                    class="city"
-                                    id="info-input"
+                                    class="info-input"
                                     placeholder="Город"
                                     required
                                 />
                                 <input
-                                    class="house-address"
-                                    id="info-input"
+                                    class="info-input"
                                     placeholder="Адрес"
                                     required
                                 />
@@ -306,6 +302,104 @@
                     <a href="#">info@yanki.com</a>
                 </div>
             </div>
+
+<!-- Модальное окно для Авторизации -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>                
+        <form id="login-form">
+            <h2>Авторизация</h2>
+            <div>
+                <input type="email" name="username" placeholder="Ваш e-mail" required>
+            </div>
+            <div class="password">
+                <input type="password" class="password__input" name="password" placeholder="Ваш пароль" required>
+                <div class="password__btn"><img src="assets\images\icons\eye-icon.svg" alt="view"></div>
+            </div>
+            <div class="non-auth">
+                <a href="" id="forgot-password-link">Забыли пароль?</a>
+                <a href="" id="register-link">Нет аккаунта?</a>
+            </div>
+            <div>
+                <button type="submit">Войти</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно для "Забыли пароль?" -->
+<div id="forgot-password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="forgot-password-form">
+        <h2>Забыли пароль?</h2>
+        <p class="enter-email">Введите свою почту и мы отправим вам код для сброса пароля и восстановления аккаунта:</p>
+        <div>
+            <input type="email" name="email" placeholder="Ваш e-mail" required>
+        </div>
+        <div>
+            <button type="submit">Войти</button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+<!-- Модальное окно для "Нет аккаунта?" -->
+<div id="register-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Регистрация</h2>
+        <input type="email" name="email" placeholder="Ваш e-mail" required>
+        <div class="password">
+            <input type="password" class="password__input" name="password" placeholder="Ваш пароль" required>
+                <div class="password__btn"><img src="assets\images\icons\eye-icon.svg" alt="view">
+                </div>
+                <button type="submit">Войти</button>
+    </div>
+</div>
+
+<!-- Модальное окно для "Забыли пароль - код из сообщения" -->
+<div id="code-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Забыли пароль?</h2>
+        <p class="modal-info">Код из сообщения:</p>
+        <input type="text" name="code" placeholder="Код*" required>
+        <div class="password">
+            <input type="password" class="password__input" name="password" placeholder="Ваш пароль*" required>
+                <div class="password__btn"><img src="assets\images\icons\eye-icon.svg" alt="view">
+                </div>
+                <button type="submit">Установить пароль</button>
+    </div>
+</div>
+
+<!-- Модальное окно для "Регистрация - 2 шаг" -->
+<div id="register-modal-step2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Регистрация - шаг 2</h2>
+        <p class="modal-info">Мы отправили вам на почту код для подтверждения регистации. Введите его, пожалуйста</p>
+        <input type="text" name="code" placeholder="Код с e-mail*" required>
+        <button type="submit">Установить пароль</button>
+    </div>
+</div>
+<!-- Модальное окно для "Забыли пароль - успешно" -->
+<div id="password-changed-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Вы успешно сменили пароль!</p>
+    </div>    
+</div>
+
+<!-- Модальное окно для "Регистрация - успешно" -->
+<div id="register-success-modal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Регистрация - успешно!</h1>
+    <p>Вы успешно зарегестрировались! Приятных покупок!</p>
+</div>    
+</div> 
+
             <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
         </footer>
         <script src="assets\js\authorization.js"></script>
