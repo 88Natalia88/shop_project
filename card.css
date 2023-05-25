@@ -200,4 +200,30 @@ body {
     background-color: white;
   }
 
+  #div_info{
+    display: none;
+  }
+
+  .text,
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .text {
+  display: block;
+}
+
+/* Стилизация псевдокнопки */
+.btn {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.card_info_button{
+  display: flex;
+  flex-direction: column;
+}
   
