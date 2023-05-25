@@ -54,12 +54,14 @@
     height: 110px;
 }
 
-.cart-item {
+.cart-item, .orderTitle {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
     /*justify-content: space-between;*/
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .cart-item__info {
@@ -308,6 +310,10 @@ input[type="email"] {
     margin: 0 auto;
 }
 
+.cart__total{
+    float:right;
+    margin-right: 250px;
+}
 @media screen and (max-width: 1440px) {
     .cart__path {
         margin: 20px auto 30px 150px;

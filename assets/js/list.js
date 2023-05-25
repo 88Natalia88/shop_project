@@ -36,8 +36,6 @@ function GetHTML(Object) {
     return html;
 }
 
-
-
 function GetCards() {
     fetch("https://fakestoreapi.com/products/category/women's clothing")
         .then((response) => {

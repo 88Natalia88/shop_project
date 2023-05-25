@@ -160,8 +160,9 @@ function renderShoppingCart() {
   cartElement.innerHTML = "";
   Object.values(productsInCart).forEach((product) => {
     console.log(product);
+    let order = `<div><h3>Ваш заказ</h3></div>`;
     let cartInfo = "";
-    cartInfo = `<div class='cart-item' data-id="${product.id}">
+    cartInfo = `<div class='cart-item' data-id="${product.id}" style="border-bottom: 0.3px solid #252525;">
     <div class="cart-item-info">    
     <img src="${product.img}">
     <div class="cart-item__info"><p class="cartId">арт: ${product.id}</p>
@@ -180,8 +181,17 @@ function renderShoppingCart() {
     <img class="remove-cart-item" data-id="${product.id}" src="assets/images/logo/delete.png"></div></div>`;
     cartElement.innerHTML += cartInfo;
   });
-  //document.querySelector('.cart__empty').style.cssText = "display: none";
-  //document.querySelector('.hidden').classList = 'decor';
+  if (Object.keys(productsInCart).length > 0) {
+    const orderHeader = '<div class="orderTitle"><h3>Ваш заказ</h3></div>';
+    cartElement.insertAdjacentHTML('afterbegin', orderHeader);
+    let totalPriceHTML = '<div class="cart__total">К оплате: <span></span></div>'; 
+    cartElement.insertAdjacentHTML("beforeend", totalPriceHTML); 
+  } else {
+    const cartTotal = document.querySelector('.cart__total');
+    if (cartTotal) {
+      cartTotal.remove(); // если элемент уже был удален ранее, избегаем ошибки
+    }
+  }
 }
 //api
 async function getProducts() {
@@ -216,6 +226,7 @@ function changeProducts(productsArray) {
     }
     localStorage.setItem("productsInCart", JSON.stringify(productsInCart));
     renderShoppingCart();
+    updateCartTotal();
   };
 }
 //удаляем товар из корзины
@@ -232,11 +243,25 @@ function removeProducts(event) {
         item.remove(); // удаление соответствующего DOM-элемента
       }
     });
-    //document.querySelector('.cart__empty').style.cssText = "display: flex";
-    //updateCartTotal();  // Обновляем общую стоимость и количество товаров в корзине
+    updateCartTotal();  // Обновляем общую стоимость и количество товаров в корзине
   }
 }
 document.addEventListener("click", removeProducts);
+
+function updateCartTotal() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  //console.log(cartItems);
+  let totalPrice = 0;
+  cartItems.forEach((cartItem) => {
+    //console.log(cartItem);
+  const price = cartItem.querySelector('.cart-item-price').textContent;
+    //console.log(price)
+  totalPrice += Number(price);
+  });
+  const cartTotal = document.querySelector('.cart__total span');
+  cartTotal.textContent = totalPrice;
+}
+updateCartTotal();
 
 // Validation
 
