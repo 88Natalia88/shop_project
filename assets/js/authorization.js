@@ -1,19 +1,22 @@
 //Показываем или скрываем пароль по нажатию на кнопку
 
 function showPassword() {
-  const passBtn = document.querySelector('.password__btn');
-  const passInput = document.querySelector('.password__input');
+  const passBtns = document.querySelectorAll('.password__btn');
+  const passInputs = document.querySelectorAll('.password__input');
 
-  passBtn.addEventListener('click', () => {
-      passBtn.classList.toggle('active')
+  passBtns.forEach((passBtn, index) => {
+    passBtn.addEventListener('click', () => {
+      passBtn.classList.toggle('active');
 
-      if (passInput.getAttribute('type') === 'password') {
-          passInput.setAttribute('type', 'text')
+      if (passInputs[index].getAttribute('type') === 'password') {
+        passInputs[index].setAttribute('type', 'text')
       } else {
-          passInput.setAttribute('type', 'password')
+        passInputs[index].setAttribute('type', 'password')
       }
-  })
-}    
+    })
+  });
+}
+
 showPassword();
 
 //Модальное окно
