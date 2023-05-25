@@ -12,6 +12,10 @@
     line-height: 1.5;
 }
 
+.modal-title {
+    font-size: 30px;
+}
+
 .modal-content {
     text-align: center;
     background-color: #fefefe;
