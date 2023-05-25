@@ -327,7 +327,7 @@ input[type="email"] {
         margin: 70px auto 0 150px;
     }
 
-    .cart-item {
+    .cart-item, .orderTitle {
         margin: 0 150px 0 150px;
     }
 }

@@ -160,7 +160,6 @@ function renderShoppingCart() {
   cartElement.innerHTML = "";
   Object.values(productsInCart).forEach((product) => {
     console.log(product);
-    let order = `<div><h3>Ваш заказ</h3></div>`;
     let cartInfo = "";
     cartInfo = `<div class='cart-item' data-id="${product.id}" style="border-bottom: 0.3px solid #252525;">
     <div class="cart-item-info">    
