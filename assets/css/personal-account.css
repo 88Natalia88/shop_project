@@ -1,7 +1,5 @@
 .account-page {
-    margin: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 8% 13% 13% 13%;
     font-size: 16px;
 } 
 
@@ -61,24 +59,11 @@
     text-align: start;
 }
 
-#info-input {
+.info-input {
     margin: 5px;
     height: 25px;
     font-size: 13px;
     padding: 5px;
-}
-
-.city, .house-address {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.city {
-    margin-right: 5px;
-}
-
-.house-address {
-    margin-left: 5px;
 }
 
 
@@ -116,15 +101,10 @@
     flex-direction: column;
     }
 
-    #info-input {
+    .info-input {
     width: 300px;
     font-size: 14px;
     height: 20px;
     text-align: center;
-    }
-    .city, .house-address {
-    width: 300px;
-    margin-left: 0;
-    margin-right: 0;
     }
 }

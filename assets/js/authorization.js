@@ -1,19 +1,22 @@
 //Показываем или скрываем пароль по нажатию на кнопку
 
 function showPassword() {
-  const passBtn = document.querySelector('.password__btn');
-  const passInput = document.querySelector('.password__input');
+  const passBtns = document.querySelectorAll('.password__btn');
+  const passInputs = document.querySelectorAll('.password__input');
 
-  passBtn.addEventListener('click', () => {
-      passBtn.classList.toggle('active')
+  passBtns.forEach((passBtn, index) => {
+    passBtn.addEventListener('click', () => {
+      passBtn.classList.toggle('active');
 
-      if (passInput.getAttribute('type') === 'password') {
-          passInput.setAttribute('type', 'text')
+      if (passInputs[index].getAttribute('type') === 'password') {
+        passInputs[index].setAttribute('type', 'text')
       } else {
-          passInput.setAttribute('type', 'password')
+        passInputs[index].setAttribute('type', 'password')
       }
-  })
-}    
+    })
+  });
+}
+
 showPassword();
 
 //Модальное окно
@@ -27,7 +30,7 @@ const passwordChangedModal = document.getElementById("password-changed-modal");
 const registerSuccessModal = document.getElementById("register-success-modal")
 
 // Кнопки, которые открывают соответствующее модальное окно
-const loginButton = document.getElementById("login-button");
+const logoutLink = document.getElementById("logout-link");
 const forgotPasswordLink = document.querySelector("#forgot-password-link");
 const registerLink = document.querySelector("#register-link");
 
@@ -37,7 +40,7 @@ modal.style.display = "block";
 }
 
 // Обработчик событий для открытия модального окна "Авторизация"
-loginButton.addEventListener("click", () => openModal(loginModal));
+logoutLink.addEventListener("click", () => openModal(loginModal));
 
 // Обработчики событий для открытия модальных окон "Забыли пароль?" и "Нет аккаунта?"
 forgotPasswordLink.addEventListener("click", (event) => {

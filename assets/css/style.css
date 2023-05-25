@@ -1,6 +1,10 @@
 @import "normalize.css";
 @import "normalize.css";
 @import "normalize.css";
+
+.header__menuBurger.show h4 {
+    color: white;
+}
 .footer__container {
     width: 100%;
     display: flex;

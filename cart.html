@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap"
-        rel="stylesheet">
-    <title>Shopping cart</title>
-    <script type="module" src="assets/js/cart.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/cart.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <title>Shopping cart</title>
+        <script type="module" src="assets/js/cart.js"></script>
+    </head>
 
 <body>
     <header class="header">
@@ -45,7 +46,7 @@
                 <ul class="menu__list">
                     <li class="menu__item"><a href="#" class="menu__link">NEW</a></li>
                     <li class="menu__item">
-                        <span class="menu__list_spanCatalog"><a href="list.html" class="menu__link">КАТАЛОГ</a></span>
+                        <span class="menu__list_spanCatalog"><a href="goods.html" class="menu__link">КАТАЛОГ</a></span>
                     </li>
                     <li class="menu__item"><a href="#" class="menu__link">О НАС</a></li>
                 </ul>
@@ -92,260 +93,392 @@
 
         </div>
 
-        <div class="cart__empty">
-            <div class="cart__empty-text">
-                <h2>В корзине пока пусто</h2>
-                <p>Загляните на главную, чтобы выбрать товары или найдите нужное в поиске</p>
-            </div>
-            <div class="cart__empty-button">
-                <a href="index.html">Перейти за покупками</a>
-            </div>
-        </div>
-
-        <div class="decor hidden">
-            <div class="decor__title">
-                <h4>Оформление заказа</h4>
-            </div>
-            <div class="decor-ordering">
-                <form class="decor-form">
-                    <div class="decor-form__form">
-                        <div class="decor-form__form-title title">
-                            <p>Персональные данные:</p>
-                        </div>
-                        <div class="decor-form__form-order">
-                            <div>
-                                <input type="text" placeholder="Ваше имя*" required id="userName">
-                                <div class="error" id="userName-error"></div>
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Ваша фамилия*" required id="userSername">
-                                <div class="error" id="userSername-error"></div>
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Ваш e-mail*" required id="userEmail">
-                                <div class="error" id="userEmail-error"></div>
-                            </div>
-                            <div>
-                                <input type="tel" placeholder="Ваш телефон*" required id="userTel">
-                                <div class="error" id="userTel-error"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="decor-form__decor">
-                        <div class="decor-form__decor-title title">
-                            <p>Способ доставки:</p>
-                        </div>
-                        <div id="delivery-error" class="error centred-error"></div>
-                        <div class="decor-form__decor-country">
-                            <div class="decor-country__inside country">
-                                <p>По Украине:</p>
-                                <div class="inside__pickup">
-                                    <input type="radio" name="delivery"
-                                        value="Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)" id="pickup">
-                                    <label for="pickup">Самовывоз - вул. Большая Васильковская 14(м. Льва
-                                        Толстого)</label></div>
-                                <div class="inside__post"><input type="radio" name="delivery" value="Новая Почта"
-                                        id="post">
-                                    <label for="post">Новая Почта</label></div>
-
-                            </div>
-                            <div class="decor-country__outside country">
-                                <p>Международная доставка:</p>
-                                <div class="outside__postOffice"><input type="radio" name="delivery"
-                                        value="Украпочта / 1-3 недели / 30$" id="postOffice">
-                                    <label for="postOffice">Украпочта / 1-3 недели / 30$</label></div>
-                                <div class="outside__DHL"><input type="radio" name="delivery"
-                                        value="DHL / 3-7 дней / 60$" id="DHL">
-                                    <label for="DHL">DHL / 3-7 дней / 60$</label></div>
-
-                            </div>
-                        </div>
-                        <div class="decor-form__address">
-                            <div class="decor-form__address-title title">
-                                <p>Адрес доставки:</p>
-                            </div>
-                            <div class="decor-form__address-city">
-                                <div>
-                                    <input type="text" placeholder="Город*" required id="city">
-                                    <div class="error" id="city-error"></div>
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Отделение почты*" required id="idPost">
-                                    <div class="error" id="idPost-error"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="decor-form__pay">
-                            <div class="decor-form__pay-title title">
-                                <p>Вы можете оплатить покупку одним из ниже перечисленных способов:</p>
-                            </div>
-                            <div id="payment-error" class="error centred-error"></div>
-                            <div class="decor-form__pay-choice">
-                                <div class="pay-choice">
-                                    <input type="radio" name="payment-choice" value="Полная предоплата через Приват 24"
-                                        id="prepayment">
-                                    <label for="prepayment">Полная предоплата через Приват 24<img
-                                            src="assets/images/logo/logo_24.png"></label>
-                                </div>
-                                <div class="pay-choice">
-                                    <input type="radio" name="payment-choice"
-                                        value="Денежным переводом  Visa/MasterCard" id="remittance">
-                                    <label for="remittance">Денежным переводом Visa/MasterCard<img
-                                            src="assets/images/logo/Visa_logo.png"><img
-                                            src="assets/images/logo/Mastercard_logo.png"></label>
-                                </div>
-                                <div class="pay-choice">
-                                    <input type="radio" name="payment-choice"
-                                        value="Наложенным платежом в отделении Новой Почты" id="payment">
-                                    <label for="payment">Наложенным платежом в отделении Новой Почты</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="decor-form__bonus">
-                            <div class="decor-form__bonus-title title">
-                                <p>Использование бонусного счёта:</p>
-                            </div>
-                            <div class="decor-form__bonus-sum">
-                                <input type="text" id="bonus" placeholder="Сумма списания бонусов">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="decor-info">
-                    <div class="decor-info__user-room">
-                        <a href="personal-account.html">Войти в личный кабинет</a>
-                    </div>
-                    <div class="decor-info__delivery info">
-                        <a href="#">УСЛОВИЯ ДОСТАВКИ</a>
-                    </div>
-                    <div class="decor-info__conditions info">
-                        <a href="exchange-and-return.html">УСЛОВИЯ ОБМЕНА И ВОЗВРАТА</a>
-                    </div>
-                    <div class="decor-info__info info">
-                        <a href="#">ИНФОРМАЦИЯ ОБ ОПЛАТЕ</a>
-                    </div>
-                    <div class="decor-info__sum">
-                        <p id="decor">ДОСТАВКА:<span></span></p>
-                        <p id="bonus">БОНУСЫ:<span></span></p>
-                        <p id="sum">ИТОГО:<span></span></p>
-                    </div>
-                    <div class="decor-info__btn">
-                        <button id="checkout">ОФОРМИТЬ ЗАКАЗ</button>
-                    </div>
-                    <div class="decor-info__policy">
-                        <p>Нажимая на кнопку «оплатить заказ», я <br> принимаю условия <a href="#">публичной оферты</a>
-                            и <br> <a href="#">политики конфиденциальности</a></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__column">
-                <h4>КОМПАНИЯ</h4>
-                <a href="#">
-                    <p class="footer__subtitle">О нас</p>
-                </a>
-                <a href="#">
-                    <p class="footer__subtitle">Контакты</p>
-                </a>
-            </div>
-            <div class="footer__column">
-                <h4>ПОЛЕЗНОЕ</h4>
-                <a href="#">
-                    <p class="footer__subtitle">Оплата и доставка</p>
-                </a>
-                <a href="#">
-                    <p class="footer__subtitle">Условия возврата</p>
-                </a>
-                <a href="#">
-                    <p class="footer__subtitle">Бонусная система</p>
-                </a>
-            </div>
-            <div class="footer__column">
-                <h4>ПОКУПАТЕЛЮ</h4>
-                <a href="#">
-                    <p class="footer__subtitle">Избранное</p>
-                </a>
-                <a href="#">
-                    <p class="footer__subtitle">Публичная оферта</p>
-                </a>
-                <a href="#">
-                    <p class="footer__subtitle">
-                        Политика конфиденциальности
+            <div class="cart__empty">
+                <div class="cart__empty-text">
+                    <h2>В корзине пока пусто</h2>
+                    <p>
+                        Загляните на главную, чтобы выбрать товары или найдите
+                        нужное в поиске
                     </p>
-                </a>
-            </div>
-            <div class="footer__column">
-                <h4>КОНТАКТЫ</h4>
-                <p>
-                    <a href="#"><img src="assets/images/logo/inst.svg" alt="SVG Icon" /></a>
-                    <a href="#"><img src="assets/images/logo/telegram.svg" alt="SVG Icon" /></a>
-                </p>
-                <p class="footer__subtitle">+38(073) 096 36 44</p>
-                <a href="#">
-                    <p class="footer__subtitle">info@yanki.com</p>
-                </a>
-            </div>
-        </div>
-        <div class="footer__mobile">
-            <div class="footer__mobile_item">
-                КОМПАНИЯ &bigtriangledown;
-                <div class="footer__mobile_wrapItem">
-                    <a href="#">
-                        <p>О нас</p>
-                    </a>
-                    <a href="#">
-                        <p>Контакты</p>
-                    </a>
+                </div>
+                <div class="cart__empty-button">
+                    <a href="index.html">Перейти за покупками</a>
                 </div>
             </div>
-            <div class="footer__mobile_item">
-                ПОЛЕЗНОЕ &bigtriangledown;
-                <div class="footer__mobile_wrapItem">
-                    <a href="#">
-                        <p>Оплата и доставка</p>
-                    </a>
-                    <a href="#">
-                        <p>Условия возврата</p>
-                    </a>
-                    <a href="#">
-                        <p>Бонусная система</p>
-                    </a>
-                </div>
-            </div>
-            <div class="footer__mobile_item">
-                ПОКУПАТЕЛЮ &bigtriangledown;
-                <div class="footer__mobile_wrapItem">
-                    <a href="#">
-                        <p>Избранное</p>
-                    </a>
-                    <a href="#">
-                        <p>Публичная оферта</p>
-                    </a>
-                    <a href="#">
-                        <p>Политика конфиденциальности</p>
-                    </a>
-                </div>
-            </div>
-            <div class="footer__mobile_contacts">
-                КОНТАКТЫ
-                <p>
-                    <a href="#"><img src="assets/images/logo/inst.svg" alt="SVG Icon" /></a>
-                    <a href="#"><img src="assets/images/logo/telegram.svg" alt="SVG Icon" /></a>
-                </p>
-                <p>+38(073) 096 36 44</p>
-                <a href="#">info@yanki.com</a>
-            </div>
-        </div>
-        <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
-    </footer>
 
-    <script type="module" src="assets/js/header.js"></script>
-    <script src="assets/js/cart.js"></script>
-    <script type="module" src="assets/js/footer.js"></script>
-</body>
+            <div class="decor hidden">
+                <div class="decor__title">
+                    <h4>Оформление заказа</h4>
+                </div>
+                <div class="decor-ordering">
+                    <form class="decor-form">
+                        <div class="decor-form__form">
+                            <div class="decor-form__form-title title">
+                                <p>Персональные данные:</p>
+                            </div>
+                            <div class="decor-form__form-order">
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Ваше имя*"
+                                        required
+                                        id="userName"
+                                    />
+                                    <div
+                                        class="error"
+                                        id="userName-error"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Ваша фамилия*"
+                                        required
+                                        id="userSername"
+                                    />
+                                    <div
+                                        class="error"
+                                        id="userSername-error"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <input
+                                        type="email"
+                                        placeholder="Ваш e-mail*"
+                                        required
+                                        id="userEmail"
+                                    />
+                                    <div
+                                        class="error"
+                                        id="userEmail-error"
+                                    ></div>
+                                </div>
+                                <div>
+                                    <input
+                                        type="tel"
+                                        placeholder="Ваш телефон*"
+                                        required
+                                        id="userTel"
+                                    />
+                                    <div class="error" id="userTel-error"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="decor-form__decor">
+                            <div class="decor-form__decor-title title">
+                                <p>Способ доставки:</p>
+                            </div>
+                            <div
+                                id="delivery-error"
+                                class="error centred-error"
+                            ></div>
+                            <div class="decor-form__decor-country">
+                                <div class="decor-country__inside country">
+                                    <p>По Украине:</p>
+                                    <div class="inside__pickup">
+                                        <input
+                                            type="radio"
+                                            name="delivery"
+                                            value="Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)"
+                                            id="pickup"
+                                        />
+                                        <label for="pickup"
+                                            >Самовывоз - вул. Большая
+                                            Васильковская 14(м. Льва
+                                            Толстого)</label
+                                        >
+                                    </div>
+                                    <div class="inside__post">
+                                        <input
+                                            type="radio"
+                                            name="delivery"
+                                            value="Новая Почта"
+                                            id="post"
+                                        />
+                                        <label for="post">Новая Почта</label>
+                                    </div>
+                                </div>
+                                <div class="decor-country__outside country">
+                                    <p>Международная доставка:</p>
+                                    <div class="outside__postOffice">
+                                        <input
+                                            type="radio"
+                                            name="delivery"
+                                            value="Украпочта / 1-3 недели / 30$"
+                                            id="postOffice"
+                                        />
+                                        <label for="postOffice"
+                                            >Украпочта / 1-3 недели / 30$</label
+                                        >
+                                    </div>
+                                    <div class="outside__DHL">
+                                        <input
+                                            type="radio"
+                                            name="delivery"
+                                            value="DHL / 3-7 дней / 60$"
+                                            id="DHL"
+                                        />
+                                        <label for="DHL"
+                                            >DHL / 3-7 дней / 60$</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decor-form__address">
+                                <div class="decor-form__address-title title">
+                                    <p>Адрес доставки:</p>
+                                </div>
+                                <div class="decor-form__address-city">
+                                    <div>
+                                        <input
+                                            type="text"
+                                            placeholder="Город*"
+                                            required
+                                            id="city"
+                                        />
+                                        <div
+                                            class="error"
+                                            id="city-error"
+                                        ></div>
+                                    </div>
+                                    <div>
+                                        <input
+                                            type="text"
+                                            placeholder="Отделение почты*"
+                                            required
+                                            id="idPost"
+                                        />
+                                        <div
+                                            class="error"
+                                            id="idPost-error"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decor-form__pay">
+                                <div class="decor-form__pay-title title">
+                                    <p>
+                                        Вы можете оплатить покупку одним из ниже
+                                        перечисленных способов:
+                                    </p>
+                                </div>
+                                <div
+                                    id="payment-error"
+                                    class="error centred-error"
+                                ></div>
+                                <div class="decor-form__pay-choice">
+                                    <div class="pay-choice">
+                                        <input
+                                            type="radio"
+                                            name="payment-choice"
+                                            value="Полная предоплата через Приват 24"
+                                            id="prepayment"
+                                        />
+                                        <label for="prepayment"
+                                            >Полная предоплата через Приват
+                                            24<img
+                                                src="assets/images/logo/logo_24.png"
+                                        /></label>
+                                    </div>
+                                    <div class="pay-choice">
+                                        <input
+                                            type="radio"
+                                            name="payment-choice"
+                                            value="Денежным переводом  Visa/MasterCard"
+                                            id="remittance"
+                                        />
+                                        <label for="remittance"
+                                            >Денежным переводом
+                                            Visa/MasterCard<img
+                                                src="assets/images/logo/Visa_logo.png" /><img
+                                                src="assets/images/logo/Mastercard_logo.png"
+                                        /></label>
+                                    </div>
+                                    <div class="pay-choice">
+                                        <input
+                                            type="radio"
+                                            name="payment-choice"
+                                            value="Наложенным платежом в отделении Новой Почты"
+                                            id="payment"
+                                        />
+                                        <label for="payment"
+                                            >Наложенным платежом в отделении
+                                            Новой Почты</label
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decor-form__bonus">
+                                <div class="decor-form__bonus-title title">
+                                    <p>Использование бонусного счёта:</p>
+                                </div>
+                                <div class="decor-form__bonus-sum">
+                                    <input
+                                        type="text"
+                                        id="bonus"
+                                        placeholder="Сумма списания бонусов"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="decor-info">
+                        <div class="decor-info__user-room">
+                            <a href="personal-account.html"
+                                >Войти в личный кабинет</a
+                            >
+                        </div>
+                        <div class="decor-info__delivery info">
+                            <a href="#">УСЛОВИЯ ДОСТАВКИ</a>
+                        </div>
+                        <div class="decor-info__conditions info">
+                            <a href="exchange-and-return.html"
+                                >УСЛОВИЯ ОБМЕНА И ВОЗВРАТА</a
+                            >
+                        </div>
+                        <div class="decor-info__info info">
+                            <a href="#">ИНФОРМАЦИЯ ОБ ОПЛАТЕ</a>
+                        </div>
+                        <div class="decor-info__sum">
+                            <p id="decor">ДОСТАВКА:<span></span></p>
+                            <p id="bonus">БОНУСЫ:<span></span></p>
+                            <p id="sum">ИТОГО:<span></span></p>
+                        </div>
+                        <div class="decor-info__btn">
+                            <button id="checkout">ОФОРМИТЬ ЗАКАЗ</button>
+                        </div>
+                        <div class="decor-info__policy">
+                            <p>
+                                Нажимая на кнопку «оплатить заказ», я <br />
+                                принимаю условия
+                                <a href="#">публичной оферты</a> и <br />
+                                <a href="#">политики конфиденциальности</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__column">
+                    <h4>КОМПАНИЯ</h4>
+                    <a href="#">
+                        <p class="footer__subtitle">О нас</p>
+                    </a>
+                    <a href="./contacts.html">
+                        <p class="footer__subtitle">Контакты</p>
+                    </a>
+                </div>
+                <div class="footer__column">
+                    <h4>ПОЛЕЗНОЕ</h4>
+                    <a href="./payment-and-delivery.html">
+                        <p class="footer__subtitle">Оплата и доставка</p>
+                    </a>
+                    <a href="./exchange-and-return.html">
+                        <p class="footer__subtitle">Условия возврата</p>
+                    </a>
+                    <a href="#">
+                        <p class="footer__subtitle">Бонусная система</p>
+                    </a>
+                </div>
+                <div class="footer__column">
+                    <h4>ПОКУПАТЕЛЮ</h4>
+                    <a href="./favorites.html">
+                        <p class="footer__subtitle">Избранное</p>
+                    </a>
+                    <a href="#">
+                        <p class="footer__subtitle">Публичная оферта</p>
+                    </a>
+                    <a href="#">
+                        <p class="footer__subtitle">
+                            Политика конфиденциальности
+                        </p>
+                    </a>
+                </div>
+                <div class="footer__column">
+                    <h4>КОНТАКТЫ</h4>
+                    <p>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/inst.svg"
+                                alt="SVG Icon"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/telegram.svg"
+                                alt="SVG Icon"
+                        /></a>
+                    </p>
+                    <p class="footer__subtitle">+38(073) 096 36 44</p>
+                    <a href="#">
+                        <p class="footer__subtitle">info@yanki.com</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__mobile">
+                <div class="footer__mobile_item">
+                    КОМПАНИЯ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="#">
+                            <p>О нас</p>
+                        </a>
+                        <a href="./contacts.html">
+                            <p>Контакты</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__mobile_item">
+                    ПОЛЕЗНОЕ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="./payment-and-delivery.html">
+                            <p>Оплата и доставка</p>
+                        </a>
+                        <a href="./exchange-and-return.html">
+                            <p>Условия возврата</p>
+                        </a>
+                        <a href="#">
+                            <p>Бонусная система</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__mobile_item">
+                    ПОКУПАТЕЛЮ &bigtriangledown;
+                    <div class="footer__mobile_wrapItem">
+                        <a href="./favorites.html">
+                            <p>Избранное</p>
+                        </a>
+                        <a href="#">
+                            <p>Публичная оферта</p>
+                        </a>
+                        <a href="#">
+                            <p>Политика конфиденциальности</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__mobile_contacts">
+                    КОНТАКТЫ
+                    <p>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/inst.svg"
+                                alt="SVG Icon"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="assets/images/logo/telegram.svg"
+                                alt="SVG Icon"
+                        /></a>
+                    </p>
+                    <p>+38(073) 096 36 44</p>
+                    <a href="#">info@yanki.com</a>
+                </div>
+            </div>
+            <p class="footer__rights">©️ 2021 Yanki. All rights reserved</p>
+        </footer>
 
+        <script type="module" src="assets/js/header.js"></script>
+        <script src="assets/js/cart.js"></script>
+        <script type="module" src="assets/js/footer.js"></script>
+    </body>
 </html>
