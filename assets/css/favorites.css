@@ -9,6 +9,7 @@ body {
 
 .favorites-title {
     text-align: center;
+    min-height: 20vh;
     margin-top: 10%;
     font-weight: 400;
     font-size: 20px;
@@ -53,5 +54,8 @@ body {
         grid-template-columns: 1fr 1fr;
         column-gap: 5px;
         margin-bottom: 74px;
+    }
+    .favorites-title {
+        margin-top: 30%;
     }
 }
