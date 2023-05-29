@@ -1,6 +1,6 @@
 # YANKI
 
-https://88natalia88.github.io/shop_project/
+https://88natalia88.github.io/shop_project/ <br>
 Командный проект в рамках программы ITGirls, над которым работали 7 разработчиц. Цель проекта - создать магазин женской одежды.
 
 **Подробнее о проекте**
