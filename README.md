@@ -1,9 +1,11 @@
 # YANKI
 
 https://88natalia88.github.io/shop_project/ <br>
+
 Командный проект в рамках программы ITGirls, над которым работали 7 разработчиц. Цель проекта - создать магазин женской одежды.
 
-**Подробнее о проекте**
+**Подробнее о проекте** <br>
+
 Проект включает в себя одну основную страницу и десять дополнительных, логически связанных между собой. На основной странице представлены все категории товаров и возможность подписаться на рекламную рассылку. На дополнительных страницах можно найти как зарегистрироваться, войти в личный кабинет, посмотреть каталог одежды, добавить товар в избранное или корзину, а так же посмотреть дополнительную информацию об оплате и доставке с условиями об обмене и возврате.
 
 # Использованные технологии:
@@ -16,10 +18,10 @@ https://88natalia88.github.io/shop_project/ <br>
 
 # Связаться:
 
-Nataliia Balashova - email@example.com
-Lika Sobolenko - email@example.com
-Rushana Alieva - email@example.com
-Anastasiia Kochkina - email@example.com
-Darina Perepelitsa - email@example.com
-Vlada Artamonova - email@example.com
-Maria Vasilyeva - masha.vasileva1@mail.ru
+Nataliia Balashova - email@example.com <br>
+Lika Sobolenko - email@example.com <br>
+Rushana Alieva - email@example.com <br>
+Anastasiia Kochkina - email@example.com <br>
+Darina Perepelitsa - email@example.com <br>
+Vlada Artamonova - email@example.com <br>
+Maria Vasilyeva - masha.vasileva1@mail.ru <br>
