@@ -18,7 +18,7 @@ https://88natalia88.github.io/shop_project/ <br>
 
 # Связаться:
 
-Nataliia Balashova - email@example.com <br>
+Nataliia Balashova - nataliyabalashova0@gmail.com <br>
 Lika Sobolenko - email@example.com <br>
 Rushana Alieva - email@example.com <br>
 Anastasiia Kochkina - email@example.com <br>
