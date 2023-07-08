@@ -15,7 +15,6 @@ https://88natalia88.github.io/shop_project/ <br>
 <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"></code>
 <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"></code>
 <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"></code>
-<code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/parcel/parsel-original.svg"></code>
 
 # Связаться:
 
